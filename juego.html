@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f4ef" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1220" />
+    <meta name="description" content="Breakout mini-game from Joseph Thomas Mansilla's portfolio." />
+    <title>Breakout — Joseph Thomas Mansilla</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">JTM</a>
+        <div class="header-actions">
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle color theme">
+            Theme
+          </button>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-nav-toggle
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="site-nav" id="site-nav" data-nav aria-label="Primary">
+            <ul>
+              <li><a href="index.html#home">Home</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#experience">Experience</a></li>
+              <li><a href="index.html#projects">Projects</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+              <li><a href="juego.html" aria-current="page">Mini-game</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <section class="section">
+        <div class="section-head reveal">
+          <p class="kicker">Play</p>
+          <h1 class="display">Breakout</h1>
+          <p class="muted">
+            Destroy every brick with the ball. Keep it alive with the paddle.
+          </p>
+        </div>
+
+        <div class="game-wrap reveal">
+          <div class="game-hud">
+            <p class="game-stat">Score: <span data-score>0</span></p>
+            <p class="game-stat">Lives: <span data-lives>3</span></p>
+            <button class="btn" type="button" data-restart>Restart</button>
+          </div>
+          <canvas
+            class="game-canvas"
+            id="breakout"
+            width="800"
+            height="600"
+            aria-label="Breakout game canvas. Move the paddle with the arrow keys, A and D, the mouse, or touch."
+          ></canvas>
+          <p class="game-hint">
+            Keyboard: Left/Right arrows or A/D. Mouse and touch: drag across the
+            canvas. The game pauses when this tab is hidden.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span data-year></span> Joseph Thomas Mansilla</p>
+        <div class="footer-links">
+          <a href="index.html">Portfolio</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>

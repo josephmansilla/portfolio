@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f4ef" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1220" />
+    <meta
+      name="description"
+      content="Portfolio of Joseph Thomas Mansilla, Systems Engineering student in Buenos Aires."
+    />
+    <title>Joseph Thomas Mansilla — Systems Engineering Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <!-- Apply saved theme before paint so the page does not flash the wrong scheme. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          /* localStorage can fail in private mode; keep the default */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#home">JTM</a>
+        <div class="header-actions">
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle color theme">
+            Theme
+          </button>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-nav-toggle
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="site-nav" id="site-nav" data-nav aria-label="Primary">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="juego.html">Mini-game</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <section class="hero" id="home">
+        <div class="hero-inner reveal">
+          <p class="kicker">Buenos Aires, Argentina</p>
+          <h1>Joseph Thomas Mansilla</h1>
+          <p class="lede">Systems Engineering Student</p>
+          <p>
+            Building maintainable software with a focus on system design,
+            architecture, and continuous learning.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">Projects</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-head reveal">
+          <p class="kicker">About</p>
+          <h2>About me</h2>
+        </div>
+        <div class="about-grid reveal">
+          <div class="about-copy">
+            <img
+              src="assets/images/placeholder-avatar.svg"
+              alt="Abstract circular avatar placeholder for Joseph Thomas Mansilla"
+              width="96"
+              height="96"
+            />
+            <p>
+              21-year-old engineering student. Passionate about software
+              engineering, with a strong interest in system design, architecture,
+              and building maintainable solutions. Known for continuous learning,
+              perseverance, and a proactive approach to solving complex problems.
+            </p>
+            <p class="muted">
+              Edit the technology list in <code>js/projects.js</code>
+              (<code>TECH_STACK</code>) when your stack changes.
+            </p>
+          </div>
+          <div>
+            <h3>Technologies I work with</h3>
+            <ul class="chip-list" data-tech-stack></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-head reveal">
+          <p class="kicker">Path</p>
+          <h2>Experience</h2>
+          <p class="muted">
+            Placeholder entries. Update the array in <code>js/experience.js</code>.
+          </p>
+        </div>
+        <ol class="timeline reveal" data-experience-list></ol>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-head reveal">
+          <p class="kicker">Work</p>
+          <h2>Projects</h2>
+          <p class="muted">
+            Placeholder cards. Update the array in <code>js/projects.js</code>.
+          </p>
+        </div>
+        <div class="filter-bar reveal" data-project-filters></div>
+        <div class="project-grid reveal" data-project-grid></div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-head reveal">
+          <p class="kicker">Hello</p>
+          <h2>Contact</h2>
+          <p class="muted">
+            Send a message through the form, or reach me on GitHub and LinkedIn.
+          </p>
+        </div>
+        <form class="contact-form reveal" data-contact-form novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <p class="field-error" data-error-for="name"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <p class="field-error" data-error-for="email"></p>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <p class="field-error" data-error-for="message"></p>
+          </div>
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-status" data-form-status role="status"></p>
+        </form>
+        <div class="social-row">
+          <a href="mailto:mansillajoseph@protonmail.com">mansillajoseph@protonmail.com</a>
+          <a href="https://github.com/josephmansilla" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/josephthomansilla" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span data-year></span> Joseph Thomas Mansilla</p>
+        <div class="footer-links">
+          <a href="juego.html">Mini-game</a>
+          <a href="#home">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/experience.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
