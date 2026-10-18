@@ -19,14 +19,16 @@ Alternatively, from the parent folder:
 npx --yes serve portfolio
 ```
 
+Pages: `index.html` (home), `about.html`, `experience.html`, `projects.html`, `project.html?id=`, `articles.html`, `contact.html`. The site is dark only, with a yellow accent. A constellation background loads from the tsparticles CDN.
+
 ### What to check
 
 - Desktop layout and a narrow (~375px) viewport
 - Hamburger menu on small screens
-- Light/dark toggle, then refresh (preference is stored in `localStorage`)
-- Project technology filter
+- Experience: Education and Work side by side on a wide screen, stacked on a phone. Courses stay hidden until you add `type: "course"` items
+- Project cards open `project.html?id=...`
+- Article cards leave the site
 - Contact validation (Formspree will not send until you set `FORMSPREE_ID` in `js/contact.js`)
-- Mini-game at `/juego.html`: keyboard, mouse, and touch; Restart; pause when the tab is hidden
 
 Sticky hover, notch/safe-area, and input zoom need a **real phone**. Desktop device emulation does not reproduce those.
 
@@ -40,9 +42,10 @@ Sticky hover, notch/safe-area, and input zoom need a **real phone**. Desktop dev
 
 | File | What to change |
 | --- | --- |
-| `js/experience.js` | Work, education, and courses (`EXPERIENCE`) |
-| `js/projects.js` | About chips (`TECH_STACK`) and project cards (`PROJECTS`) |
-| `index.html` | Name, bio, and links |
+| `js/experience.js` | Education, work, and courses (`EXPERIENCE`) |
+| `js/projects.js` | About chips (`TECH_STACK`), cards, and `details` |
+| `js/articles.js` | Article cards and `SUBSTACK_URL` |
+| `about.html` | Bio |
 | `assets/images/` | Replace `placeholder-avatar.svg` with a photo (keep `alt` text in HTML) |
 
 ## GitHub Pages

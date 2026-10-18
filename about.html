@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#161616" />
+    <meta name="description" content="About Joseph Thomas Mansilla, Systems Engineering student." />
+    <title>About — Joseph Thomas Mansilla</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <div id="particles" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">JTM</a>
+        <div class="header-actions">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-nav-toggle
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="site-nav" id="site-nav" data-nav aria-label="Primary">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" aria-current="page">About</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="articles.html">Articles</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <section class="section">
+        <div class="section-head reveal">
+          <p class="kicker">About</p>
+          <h1>About me</h1>
+        </div>
+        <div class="about-grid reveal">
+          <div class="about-copy">
+            <img
+              src="assets/images/placeholder-avatar.svg"
+              alt="Abstract circular avatar placeholder for Joseph Thomas Mansilla"
+              width="96"
+              height="96"
+            />
+            <p>
+              21-year-old engineering student. Passionate about software
+              engineering, with a strong interest in system design, architecture,
+              and building maintainable solutions. Known for continuous learning,
+              perseverance, and a proactive approach to solving complex problems.
+            </p>
+            <p class="muted">
+              Edit the technology list in <code>js/projects.js</code>
+              (<code>TECH_STACK</code>) when your stack changes.
+            </p>
+          </div>
+          <div>
+            <h2>Technologies I work with</h2>
+            <ul class="chip-list" data-tech-stack></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span data-year></span> Joseph Thomas Mansilla</p>
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+  </body>
+</html>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
     />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f4ef" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1220" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#161616" />
     <meta name="description" content="Breakout mini-game from Joseph Thomas Mansilla's portfolio." />
     <title>Breakout — Joseph Thomas Mansilla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,15 +19,6 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <script>
-      (function () {
-        try {
-          var saved = localStorage.getItem("theme");
-          var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-          document.documentElement.setAttribute("data-theme", theme);
-        } catch (e) {}
-      })();
-    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -37,9 +27,6 @@
       <div class="header-inner">
         <a class="logo" href="index.html">JTM</a>
         <div class="header-actions">
-          <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle color theme">
-            Theme
-          </button>
           <button
             class="nav-toggle"
             type="button"
@@ -54,12 +41,12 @@
           </button>
           <nav class="site-nav" id="site-nav" data-nav aria-label="Primary">
             <ul>
-              <li><a href="index.html#home">Home</a></li>
-              <li><a href="index.html#about">About</a></li>
-              <li><a href="index.html#experience">Experience</a></li>
-              <li><a href="index.html#projects">Projects</a></li>
-              <li><a href="index.html#contact">Contact</a></li>
-              <li><a href="juego.html" aria-current="page">Mini-game</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="articles.html">Articles</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
         </div>
