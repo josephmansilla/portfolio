@@ -2,53 +2,90 @@
   projects.js
   (placeholder) About chips, project cards, and the project detail page.
 
-  TECH_STACK feeds about.html.
+  TECH_STACK is the programming list on About (not spoken languages).
   PROJECTS feeds projects.html. Each card links to project.html?id=...
   `details` is the longer text shown only on the detail page.
 */
 
-const TECH_STACK = ["HTML", "CSS", "JavaScript", "Git", "SQL", "Python"];
+/* Programming languages. Spoken languages live in about.html. */
+const TECH_STACK = ["Java", "JavaScript", "SQL", "Go", "Scala", "Ruby", "Haskell", "Python"];
+
+const TECHNOLOGIES = [
+  "Spring",
+  "Hibernate",
+  "React",
+  "Microsoft SQL Server",
+  "MongoDB",
+  "MySQL",
+  "Express.js",
+  "AWS",
+  "Oracle Cloud",
+  "Docker", 
+  "Docker Compose",
+];
+
 
 const PROJECTS = [
   {
     id: "p1",
-    title: "Campus study planner (placeholder)",
-    description: "A static planner that groups weekly tasks by course and deadline.",
+    title: "Operating System from Scratch",
+    description: "This integrator project was developed throughout UTN's Operating Systems class, focusing on the simulation of a distributed operating system.",
     details: [
-      "This is placeholder copy for the project page. Replace it with what you actually built, who it was for, and what you learned.",
-      "The planner groups a week of tasks by course so a deadline does not get lost in a single flat list. The interface is static HTML styled with CSS Grid.",
+      "Its goal is to apply key concepts of process scheduling, memory management, and input/output (I/O), while implementing a distributed architecture with multiple modules communicating via HTTP, using multithreading and concurrency.",
+      "Led the development of the Memory module, responsible for resource allocation and management for each process, ensuring optimal performance based on predefined metrics and functional requirements.",
     ],
-    techs: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/josephmansilla",
-    demo: "",
-    image: "assets/images/placeholder-avatar.svg",
+    techs: ["Go","Multithreading", "Concurrency", "Git"],
+    github: "https://github.com/josephmansilla/tp-sistemas-operativos-1c-2025",
+    demo: "https://www.youtube.com/watch?v=twMAzy64x6Q&feature=youtu.be",
+    image: "assets/images/boca-gopher.png",
   },
   {
     id: "p2",
-    title: "Library inventory notes (placeholder)",
-    description: "Simple CRUD-style notes UI for tracking books and loan status.",
+    title: "Full-Stack Incident Management Web Application",
+    description: "MetaMapa is a project developed as an integrator project for UTN's System Design class. It is a microservices-based distributed platform for collaborative mapping management designed to enhance collective intelligence. Developed with Java 17 and Spring.",
     details: [
-      "Placeholder detail. Describe the data you stored and how a reader would add or return a book.",
-      "The interesting part to write about is the shape of the records: title, status, and who has the copy.",
+      "Developed backend using Java and Spring, and built the frontend with HTML, CSS, JavaScript, and Thymeleaf.",
+      "Designed a scalable microservices architecture with RESTful APIs to enable efficient communication between services and support platform scalability.",
+      "Deployed the app with AWS, orchestrating Docker containers for each microservice in a production environment.",
     ],
-    techs: ["JavaScript", "SQL"],
-    github: "https://github.com/josephmansilla",
+    techs: [ "Java", "SpringBoot", "SQL","MySQL", "Maven", "CSS", "HTML", "JavaScript", "AWS", "Docker", "Hibernate", "Git"],
+    github: "https://github.com/josephmansilla/tp-dsi-full-stack-app-2025",
     demo: "",
-    image: "assets/images/placeholder-avatar.svg",
+    image: "assets/images/metamapa.webp",
   },
   {
     id: "p3",
-    title: "CLI file organizer (placeholder)",
-    description: "A small Python script that sorts downloads into folders by type.",
+    title: "Travel Database & Business Intelligence Platform",
+    description: "This project implements a comprehensive Business Intelligence system for a travel agency offering tourism services developed as an integrator project for UTN's dababase class.",
     details: [
-      "Placeholder detail. Explain the rules the script uses, for example images in one folder and documents in another.",
-      "Mention how you tested it on a sample folder before pointing it at real downloads.",
+      "Designed and implemented a relational database in 3NF, modeling domain and migrating from denormalized tables.",
+      "Designed a star-schema and analytical views to support Business Intelligence reporting and decision-making.",
+      "Transactional Setup: Downloads a denormalized SQL table with over 700,000 records and executes the initial creation script to generate the core domain Entity-Relationship Diagram (ERD).",
+      "BI & BA Generation: Runs the subsequent script to build the star schema tables and analytical views required for Business Intelligence and Business Analysis objectives."
     ],
-    techs: ["Python", "Git"],
-    github: "https://github.com/josephmansilla",
+    techs: ["SQL", "T-SQL", "Microsoft SQL Server"],
+    github: "https://github.com/josephmansilla/tp-agencia-viajes-BI-bbdd-1c-2026",
     demo: "",
-    image: "assets/images/placeholder-avatar.svg",
+    image: "assets/images/octopus.webp",
   },
+  {
+    id: "p4",
+    title: "Full-Stack Medical Appointment Platform",
+    description: "This project is an end-to-end software application developed as an integrator project for UTN's Software Engineering class. It covers the entire application lifecycle—from core domain modeling and database architecture to front-end development, containerization, cloud deployment, and automated testing.",
+    details: [
+      "Methodology & Core Domain: Developed using an iterative and incremental process, grounded in a refined Object-Oriented Programming (OOP) domain model.",
+      "Backend & API Architecture: Powered by a self-documented RESTful API featuring robust concurrency control and race condition management.",
+      "Database & Persistence: Utilizes MongoDB for scalable NoSQL data persistence.",
+      "Testing & Quality Assurance: Includes a full suite of unit and integration tests, along with End-to-End (E2E) test automation implemented with Playwright.",
+      "Frontend & User Experience: Built as a React Single Page Application (SPA) designed with an intuitive UX and strict accessibility standards (WCAG/ARIA compliance).",
+      "DevOps & Cloud Infrastructure: Containerized with Docker, orchestrated via Portainer and Nginx, and deployed on Oracle Cloud Infrastructure (OCI).",
+    ],
+    techs: ["JavaScript", "React", "CSS", "HTML", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Git", "Swagger", "Nginx", "Oracle Cloud", "Docker", "Docker Compose", "Portainer"],
+    github: "https://github.com/josephmansilla/tp-sweet-medical-dds-1c-2026",
+    demo: "https://sweet-medical-2026-g1.duckdns.org/",
+    image: "assets/images/sweetmedical.webp",
+  },
+  
 ];
 
 function escapeHtml(value) {
@@ -59,12 +96,19 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
+function chipList(items) {
+  return items
+    .map(function (tech) {
+      return '<li class="chip">' + escapeHtml(tech) + "</li>";
+    })
+    .join("");
+}
+
 (function renderTechStack() {
-  const list = document.querySelector("[data-tech-stack]");
-  if (!list) return;
-  list.innerHTML = TECH_STACK.map(function (tech) {
-    return '<li class="chip">' + escapeHtml(tech) + "</li>";
-  }).join("");
+  const techStack = document.querySelector("[data-tech-stack]");
+  const technologies = document.querySelector("[data-technologies]");
+  if (techStack) techStack.innerHTML = chipList(TECH_STACK);
+  if (technologies) technologies.innerHTML = chipList(TECHNOLOGIES);
 })();
 
 (function renderProjects() {
