@@ -1,12 +1,5 @@
-/*
-  contact.js
-  Validates the contact form, then POSTs JSON to Formspree.
 
-  Replace FORMSPREE_ID with the ID from https://formspree.io
-  (the last part of https://formspree.io/f/xxxxxxxx).
-*/
-
-const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
+const FORMSPREE_ID = "xjygzzjv";
 
 (function () {
   const form = document.querySelector("[data-contact-form]");

@@ -1,14 +1,7 @@
-/*
-  articles.js
-  Pieces that live somewhere else (Substack or any URL).
 
-  Replace SUBSTACK_URL with your profile.
-  Each item's `url` is where the title link goes. Nothing is imported
-  from Substack automatically.
-*/
 
 const SUBSTACK_URL =
-  typeof SITE_LINKS !== "undefined" ? SITE_LINKS.substack : "https://substack.com";
+  typeof SITE_LINKS !== "undefined" ? SITE_LINKS.substack : "https://substack.com/@josephmansilla";
 
 const ARTICLES = [
   {
@@ -20,9 +13,9 @@ const ARTICLES = [
     },
     date: "19/10/2026",
     excerpt: {
-      en: "A short placeholder.",
-      es: "Un texto breve de relleno.",
-      pt: "Um texto curto de preenchimento.",
+      en: "A placeholder.",
+      es: "Un relleno breve.",
+      pt: "Um preenchimento curto.",
     },
     url: "https://substack.com/@josephmansilla",
   },

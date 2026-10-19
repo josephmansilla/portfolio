@@ -1,14 +1,3 @@
-/*
-  shell.js
-  One header and one footer for every page.
-  Every page uses the same nav. data-page marks the current link.
-
-  Social URLs live here so the footer, home, and contact stay in sync.
-  Replace youtube when you have the channel address.
-  i18n.js holds Spanish and Portuguese. Changing the dropdown
-  dispatches "langchange" so each page repaints its copy.
-*/
-
 var SITE_LINKS = {
   github: "https://github.com/josephmansilla",
   linkedin: "https://www.linkedin.com/in/josephthomansilla",

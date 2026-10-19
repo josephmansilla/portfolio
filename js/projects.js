@@ -1,13 +1,4 @@
-/*
-  projects.js
-  (placeholder) About chips, project cards, and the project detail page.
 
-  TECH_STACK is the programming list on About (not spoken languages).
-  PROJECTS feeds projects.html. Each card links to project.html?id=...
-  `details` is the longer text shown only on the detail page.
-*/
-
-/* Programming languages. Spoken languages live in about.html. */
 const TECH_STACK = ["Java", "JavaScript", "SQL", "Go", "Scala", "Ruby", "Haskell", "Python"];
 
 const TECHNOLOGIES = [

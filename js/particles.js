@@ -1,10 +1,3 @@
-/*
-  particles.js
-  Constellation background (tsparticles from a CDN).
-  The canvas sits behind the page and does not capture clicks.
-  Reduced-motion users get a still background instead.
-*/
-
 (function () {
   const host = document.getElementById("particles");
   if (!host || !window.tsParticles) return;
@@ -28,8 +21,6 @@
       opacity: { value: 0.85 },
       size: { value: { min: 1.5, max: 3.5 } },
     },
-    /* detectsOn "window" so the canvas can stay click-through
-       (pointer-events: none) and still see the cursor. */
     interactivity: {
       detectsOn: "window",
       events: {
