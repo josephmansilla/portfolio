@@ -37,24 +37,24 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
     let ok = true;
 
     if (!name) {
-      setError("name", "Please enter your name.");
+      setError("name", t("contact.nameRequired"));
       ok = false;
     } else {
       setError("name", "");
     }
 
     if (!email) {
-      setError("email", "Please enter your email.");
+      setError("email", t("contact.emailRequired"));
       ok = false;
     } else if (!validEmail(email)) {
-      setError("email", "Please enter a valid email address.");
+      setError("email", t("contact.emailInvalid"));
       ok = false;
     } else {
       setError("email", "");
     }
 
     if (message.length < 10) {
-      setError("message", "Please write at least 10 characters.");
+      setError("message", t("contact.messageShort"));
       ok = false;
     } else {
       setError("message", "");
@@ -77,19 +77,18 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
 
     if (!validate()) {
       status.classList.add("is-error");
-      status.textContent = "Check the highlighted fields and try again.";
+      status.textContent = t("contact.check");
       return;
     }
 
     if (!FORMSPREE_ID || FORMSPREE_ID === "YOUR_FORMSPREE_ID") {
       status.classList.add("is-error");
-      status.textContent =
-        "Formspree is not configured yet. Replace FORMSPREE_ID in js/contact.js.";
+      status.textContent = t("contact.unconfigured");
       return;
     }
 
     submit.disabled = true;
-    status.textContent = "Sending…";
+    status.textContent = t("contact.sending");
 
     fetch("https://formspree.io/f/" + FORMSPREE_ID, {
       method: "POST",
@@ -106,7 +105,7 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
       .then(function (response) {
         if (!response.ok) throw new Error("Request failed");
         status.classList.add("is-success");
-        status.textContent = "Thanks. Your message was sent.";
+        status.textContent = t("contact.thanks");
         form.reset();
         setError("name", "");
         setError("email", "");
@@ -114,7 +113,7 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
       })
       .catch(function () {
         status.classList.add("is-error");
-        status.textContent = "Something went wrong. Please email me directly.";
+        status.textContent = t("contact.fail");
       })
       .finally(function () {
         submit.disabled = false;

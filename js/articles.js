@@ -13,14 +13,22 @@ const SUBSTACK_URL =
 const ARTICLES = [
   {
     id: "a1",
-    title: "Current Placeholder",
+    title: {
+      en: "Current Placeholder",
+      es: "Marcador de posición",
+      pt: "Marcador de posição",
+    },
     date: "19/10/2026",
-    excerpt: "A short placeholder.",
+    excerpt: {
+      en: "A short placeholder.",
+      es: "Un texto breve de relleno.",
+      pt: "Um texto curto de preenchimento.",
+    },
     url: "https://substack.com/@josephmansilla",
   },
 ];
 
-(function renderArticles() {
+function renderArticles() {
   const list = document.querySelector("[data-article-list]");
   const profile = document.querySelector("[data-substack]");
   if (profile) profile.setAttribute("href", SUBSTACK_URL);
@@ -35,15 +43,18 @@ const ARTICLES = [
       escapeHtml(article.date) +
       "</p>" +
       "<h3>" +
-      escapeHtml(article.title) +
+      escapeHtml(L(article.title)) +
       "</h3>" +
       "<p>" +
-      escapeHtml(article.excerpt) +
+      escapeHtml(L(article.excerpt)) +
       "</p>" +
       "</a>"
     );
   }).join("");
-})();
+}
+
+renderArticles();
+document.addEventListener("langchange", renderArticles);
 
 function escapeHtml(value) {
   return String(value)

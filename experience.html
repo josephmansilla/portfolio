@@ -21,31 +21,31 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="experience">
+  <body data-page="experience" data-i18n-title="meta.experience">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
     <div id="site-header"></div>
 
     <main id="main" class="site-main">
       <section class="section">
         <div class="section-head reveal">
-          <p class="kicker">Path</p>
-          <h1>Experience</h1>
+          <p class="kicker" data-i18n="experience.kicker">Path</p>
+          <h1 data-i18n="experience.title">Experience</h1>
         </div>
 
         <div class="experience-layout reveal">
           <div class="experience-side">
             <section class="experience-block" data-experience-block>
-              <h2>Education</h2>
+              <h2 data-i18n="experience.education">Education</h2>
               <ol class="timeline" data-experience-list="education"></ol>
             </section>
             <section class="experience-block" data-experience-block hidden>
-              <h2>Courses</h2>
+              <h2 data-i18n="experience.courses">Courses</h2>
               <ol class="timeline" data-experience-list="course"></ol>
             </section>
           </div>
           <section class="experience-block" data-experience-block>
-            <h2>Work</h2>
+            <h2 data-i18n="experience.work">Work</h2>
             <ol class="timeline" data-experience-list="work"></ol>
           </section>
         </div>
@@ -55,6 +55,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/shell.js"></script>
     <script src="js/main.js"></script>
     <script src="js/experience.js"></script>

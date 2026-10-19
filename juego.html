@@ -21,34 +21,35 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="game">
-    <a class="skip-link" href="#main">Skip to content</a>
+  <body data-page="game" data-i18n-title="meta.game">
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
     <div id="site-header"></div>
 
     <main id="main" class="site-main">
       <section class="section">
         <div class="section-head reveal">
-          <p class="kicker">Play</p>
+          <p class="kicker" data-i18n="game.kicker">Play</p>
           <h1 class="display">Breakout</h1>
-          <p class="muted">
+          <p class="muted" data-i18n="game.intro">
             Destroy every brick with the ball. Keep it alive with the paddle.
           </p>
         </div>
 
         <div class="game-wrap reveal">
           <div class="game-hud">
-            <p class="game-stat">Score: <span data-score>0</span></p>
-            <p class="game-stat">Lives: <span data-lives>3</span></p>
-            <button class="btn" type="button" data-restart>Restart</button>
+            <p class="game-stat"><span data-i18n="game.score">Score</span>: <span data-score>0</span></p>
+            <p class="game-stat"><span data-i18n="game.lives">Lives</span>: <span data-lives>3</span></p>
+            <button class="btn" type="button" data-restart data-i18n="game.restart">Restart</button>
           </div>
           <canvas
             class="game-canvas"
             id="breakout"
             width="800"
             height="600"
+            data-i18n-aria="game.canvas"
             aria-label="Breakout game canvas. Move the paddle with the arrow keys, A and D, the mouse, or touch."
           ></canvas>
-          <p class="game-hint">
+          <p class="game-hint" data-i18n="game.hint">
             Keyboard: Left/Right arrows or A/D. Mouse and touch: drag across the
             canvas. The game pauses when this tab is hidden.
           </p>
@@ -57,6 +58,7 @@
     </main>
     <div id="site-footer"></div>
 
+    <script src="js/i18n.js"></script>
     <script src="js/shell.js"></script>
     <script src="js/main.js"></script>
     <script src="js/game.js"></script>

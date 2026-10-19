@@ -21,20 +21,21 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="projects">
+  <body data-page="projects" data-i18n-title="meta.projects">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
     <div id="site-header"></div>
 
     <main id="main" class="site-main">
       <section class="section reveal" data-project-detail>
-        <p class="muted">Loading project…</p>
+        <p class="muted" data-i18n="projects.loading">Loading project…</p>
       </section>
     </main>
     <div id="site-footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/shell.js"></script>
     <script src="js/main.js"></script>
     <script src="js/projects.js"></script>

@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="about">
+  <body data-page="about" data-i18n-title="meta.about">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
 
     <div id="site-header"></div>
 
@@ -32,27 +32,27 @@
         <div class="about-layout reveal">
           <div class="about-main">
             <div class="section-head">
-              <p class="kicker">About</p>
-              <h1>About me</h1>
+              <p class="kicker" data-i18n="about.kicker">About</p>
+              <h1 data-i18n="about.title">About me</h1>
             </div>
             <div class="about-bios">
-              <p class="bio">
+              <p class="bio" data-i18n="about.bio1">
                 Born in the United States, raised in Buenos Aires. Currently 22 years old and studying systems engineering at UTN in Buenos Aires.
               </p>
-              <p class="bio">
+              <p class="bio" data-i18n="about.bio2">
                 Passionate about software engineering, with a strong interest in system design, architecture, networking and infrastructure.
               </p>
-              <p class="bio">
+              <p class="bio" data-i18n="about.bio3">
                 I enjoy learning and being up to date with tech, movies, music and books.
               </p>
             </div>
             <div class="about-skills">
               <div class="stack-block">
-                <h2>Tech Stack</h2>
+                <h2 data-i18n="about.stack">Tech Stack</h2>
                 <ul class="chip-list" data-tech-stack></ul>
               </div>
               <div class="stack-block">
-                <h2>Technologies</h2>
+                <h2 data-i18n="about.technologies">Technologies</h2>
                 <ul class="chip-list" data-technologies></ul>
               </div>
             </div>
@@ -66,11 +66,11 @@
               height="240"
             />
             <div class="about-copy">
-              <h2>Languages</h2>
+              <h2 data-i18n="about.languages">Languages</h2>
               <ul class="spoken-list">
-                <li><span>Spanish</span><span>Native</span></li>
-                <li><span>English</span><span>Advanced</span></li>
-                <li><span>Portuguese</span><span>Basic</span></li>
+                <li><span data-i18n="about.spanish">Spanish</span><span data-i18n="about.native">Native</span></li>
+                <li><span data-i18n="about.english">English</span><span data-i18n="about.advanced">Advanced</span></li>
+                <li><span data-i18n="about.portuguese">Portuguese</span><span data-i18n="about.basic">Basic</span></li>
               </ul>
             </div>
           </div>
@@ -82,6 +82,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/shell.js"></script>
     <script src="js/main.js"></script>
     <script src="js/projects.js"></script>

@@ -206,12 +206,12 @@
       ctx.font = "600 32px Outfit, system-ui, sans-serif";
       ctx.textAlign = "center";
       ctx.fillText(
-        state.status === "won" ? "You cleared the board" : "Game over",
+        state.status === "won" ? t("game.won") : t("game.lost"),
         W / 2,
         H / 2
       );
       ctx.font = "400 18px Source Sans 3, system-ui, sans-serif";
-      ctx.fillText("Press Restart to play again", W / 2, H / 2 + 36);
+      ctx.fillText(t("game.again"), W / 2, H / 2 + 36);
     }
   }
 

@@ -24,9 +24,9 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="home">
+  <body data-page="home" data-i18n-title="meta.home">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
 
     <div id="site-header"></div>
 
@@ -35,22 +35,23 @@
         <div class="hero-inner reveal">
           <p class="kicker place">
             <span class="icon-mask icon-pin" aria-hidden="true"></span>
-            Buenos Aires, Argentina
+            <span data-i18n="home.place">Buenos Aires, Argentina</span>
           </p>
           <h1>Joseph Thomas Mansilla</h1>
-          <p class="lede">Systems Engineering Student</p>
-          <p class="bio">
+          <p class="lede" data-i18n="home.lede">Systems Engineering Student</p>
+          <p class="bio" data-i18n="home.bio">
             Learning to become better.
           </p>
           <div class="hero-social" data-social="email github linkedin youtube twitter"></div>
           <div class="hero-actions">
-            <a class="btn" href="projects.html">Projects</a>
-            <a class="btn btn-ghost" href="contact.html">Contact</a>
+            <a class="btn" href="projects.html" data-i18n="home.projects">Projects</a>
+            <a class="btn btn-ghost" href="contact.html" data-i18n="home.contact">Contact</a>
             <a
               class="btn btn-ghost"
               data-resume
               download
               href="assets/cv/resume-Joseph-Mansilla-en.pdf"
+              data-i18n-aria="home.resume"
               aria-label="Download resume"
             >
               <span class="icon-mask icon-resume" aria-hidden="true"></span>
@@ -64,6 +65,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/shell.js"></script>
     <script src="js/main.js"></script>
   </body>

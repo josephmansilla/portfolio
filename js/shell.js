@@ -5,8 +5,8 @@
 
   Social URLs live here so the footer, home, and contact stay in sync.
   Replace youtube when you have the channel address.
-  Language copies (Spanish / Portuguese) are not written yet.
-  The dropdown only remembers the choice.
+  i18n.js holds Spanish and Portuguese. Changing the dropdown
+  dispatches "langchange" so each page repaints its copy.
 */
 
 var SITE_LINKS = {
@@ -90,10 +90,12 @@ var RESUME_FILES = {
         return (
           "<li><a href=\"" +
           item.href +
+          "\" data-i18n=\"nav." +
+          item.id +
           "\"" +
           current +
           ">" +
-          item.label +
+          t("nav." + item.id) +
           "</a></li>"
         );
       })
@@ -103,18 +105,26 @@ var RESUME_FILES = {
       '<header class="site-header">' +
       '<div class="header-inner">' +
       '<div class="header-start">' +
-      '<a class="logo" href="index.html" aria-label="Home"></a>' +
+      '<a class="logo" href="index.html" data-i18n-aria="nav.home" aria-label="' +
+      t("nav.home") +
+      '"></a>' +
       "</div>" +
       '<div class="header-actions">' +
       '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>' +
       "<span></span><span></span><span></span>" +
-      '<span class="visually-hidden">Menu</span>' +
+      '<span class="visually-hidden" data-i18n="nav.menu">' +
+      t("nav.menu") +
+      "</span>" +
       "</button>" +
-      '<nav class="site-nav" id="site-nav" data-nav aria-label="Primary"><ul>' +
+      '<nav class="site-nav" id="site-nav" data-nav data-i18n-aria="nav.primary" aria-label="' +
+      t("nav.primary") +
+      '"><ul>' +
       items +
       "</ul></nav>" +
       '<div class="lang-menu">' +
-      '<button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-list" aria-label="Language">' +
+      '<button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-list" data-i18n-aria="nav.language" aria-label="' +
+      t("nav.language") +
+      '">' +
       icon("language") +
       "</button>" +
       '<ul class="lang-list" id="lang-list" hidden>' +
@@ -142,7 +152,9 @@ var RESUME_FILES = {
     footerHost.outerHTML =
       '<footer class="site-footer">' +
       '<div class="footer-inner">' +
-      '<nav class="footer-social" aria-label="Social">' +
+      '<nav class="footer-social" data-i18n-aria="nav.social" aria-label="' +
+      t("nav.social") +
+      '">' +
       social +
       "</nav>" +
       "<p>© <span data-year></span> Joseph Thomas Mansilla</p>" +
@@ -156,7 +168,7 @@ var RESUME_FILES = {
     youtube: { href: "youtube", icon: "youtube", label: "YouTube" },
     twitter: { href: "twitter", icon: "twitter", label: "Twitter" },
     discord: { href: "discord", icon: "discord", label: "Discord" },
-    resume: { href: "resume", icon: "resume", label: "Download resume" },
+    resume: { href: "resume", icon: "resume", label: "home.resume" },
   };
 
   document.querySelectorAll("[data-social]").forEach(function (host) {
@@ -173,8 +185,10 @@ var RESUME_FILES = {
           return (
             '<a class="icon-btn" data-resume download href="' +
             resumeHref() +
-            '" aria-label="' +
+            '" data-i18n-aria="' +
             item.label +
+            '" aria-label="' +
+            t(item.label) +
             '">' +
             icon(item.icon) +
             "</a>"
@@ -211,7 +225,8 @@ var RESUME_FILES = {
     function markLang(code) {
       langList.querySelectorAll("[data-lang-option]").forEach(function (button) {
         var on = button.getAttribute("data-lang-option") === code;
-        button.setAttribute("aria-current", on ? "true" : "false");
+        if (on) button.setAttribute("aria-current", "true");
+        else button.removeAttribute("aria-current");
       });
     }
 
@@ -247,6 +262,7 @@ var RESUME_FILES = {
         /* private mode */
       }
       closeLang();
+      document.dispatchEvent(new CustomEvent("langchange"));
     });
 
     document.addEventListener("click", function (event) {
@@ -259,4 +275,6 @@ var RESUME_FILES = {
       if (event.key === "Escape") closeLang();
     });
   }
+
+  if (typeof applyI18n === "function") applyI18n();
 })();
