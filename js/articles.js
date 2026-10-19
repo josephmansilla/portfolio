@@ -7,22 +7,16 @@
   from Substack automatically.
 */
 
-const SUBSTACK_URL = "https://substack.com";
+const SUBSTACK_URL =
+  typeof SITE_LINKS !== "undefined" ? SITE_LINKS.substack : "https://substack.com";
 
 const ARTICLES = [
   {
     id: "a1",
-    title: "Notes on keeping a system easy to change (placeholder)",
-    date: "2026",
-    excerpt: "A short placeholder. Point this at a real Substack post when you publish one.",
-    url: "https://substack.com",
-  },
-  {
-    id: "a2",
-    title: "What I look for in a readable codebase (placeholder)",
-    date: "2026",
-    excerpt: "Another placeholder card. The click always leaves this site.",
-    url: "https://substack.com",
+    title: "Current Placeholder",
+    date: "19/10/2026",
+    excerpt: "A short placeholder.",
+    url: "https://substack.com/@josephmansilla",
   },
 ];
 

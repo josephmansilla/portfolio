@@ -36,7 +36,10 @@ const PROJECTS = [
     ],
     techs: ["Go","Multithreading", "Concurrency", "Git"],
     github: "https://github.com/josephmansilla/tp-sistemas-operativos-1c-2025",
-    demo: "https://www.youtube.com/watch?v=twMAzy64x6Q&feature=youtu.be",
+    demo: "",
+    video: "https://www.youtube.com/watch?v=twMAzy64x6Q",
+    start: "Apr 2025",
+    end: "Jul 2025",
     image: "assets/images/boca-gopher.png",
   },
   {
@@ -51,6 +54,9 @@ const PROJECTS = [
     techs: [ "Java", "SpringBoot", "SQL","MySQL", "Maven", "CSS", "HTML", "JavaScript", "AWS", "Docker", "Hibernate", "Git"],
     github: "https://github.com/josephmansilla/tp-dsi-full-stack-app-2025",
     demo: "",
+    video: "",
+    start: "Apr 2025",
+    end: "Dec 2025",
     image: "assets/images/metamapa.webp",
   },
   {
@@ -66,6 +72,9 @@ const PROJECTS = [
     techs: ["SQL", "T-SQL", "Microsoft SQL Server"],
     github: "https://github.com/josephmansilla/tp-agencia-viajes-BI-bbdd-1c-2026",
     demo: "",
+    video: "",
+    start: "Mar 2026",
+    end: "Jul 2026",
     image: "assets/images/octopus.webp",
   },
   {
@@ -83,6 +92,9 @@ const PROJECTS = [
     techs: ["JavaScript", "React", "CSS", "HTML", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Git", "Swagger", "Nginx", "Oracle Cloud", "Docker", "Docker Compose", "Portainer"],
     github: "https://github.com/josephmansilla/tp-sweet-medical-dds-1c-2026",
     demo: "https://sweet-medical-2026-g1.duckdns.org/",
+    video: "",
+    start: "Apr 2026",
+    end: "Jul 2026",
     image: "assets/images/sweetmedical.webp",
   },
   
@@ -94,6 +106,17 @@ function escapeHtml(value) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function dateRange(project) {
+  if (project.start && project.end) return project.start + " – " + project.end;
+  return project.start || project.end || "";
+}
+
+function youtubeId(url) {
+  if (!url) return "";
+  const match = String(url).match(/(?:youtu\.be\/|v=|embed\/)([A-Za-z0-9_-]{11})/);
+  return match ? match[1] : "";
 }
 
 function chipList(items) {
@@ -132,9 +155,14 @@ function chipList(items) {
       '<a class="project-card" href="project.html?id=' +
       encodeURIComponent(project.id) +
       '">' +
+      '<div class="card-media">' +
       '<img src="' +
       escapeHtml(project.image) +
       '" alt="" width="48" height="48" />' +
+      "<p class=\"project-dates\">" +
+      escapeHtml(dateRange(project)) +
+      "</p>" +
+      "</div>" +
       "<h3>" +
       escapeHtml(project.title) +
       "</h3>" +
@@ -217,21 +245,41 @@ function chipList(items) {
   const links = [];
   if (project.github) {
     links.push(
-      '<a href="' + escapeHtml(project.github) + '" rel="noopener noreferrer">GitHub</a>'
+      '<a href="' + escapeHtml(project.github) + '" rel="noopener noreferrer">Source code</a>'
     );
   }
   if (project.demo) {
     links.push(
-      '<a href="' + escapeHtml(project.demo) + '" rel="noopener noreferrer">Demo</a>'
+      '<a class="try-link" href="' +
+        escapeHtml(project.demo) +
+        '" rel="noopener noreferrer"><span class="icon-mask icon-arcade" aria-hidden="true"></span>Try it out</a>'
     );
   }
+
+  const videoId = youtubeId(project.video);
+  const videoHtml = videoId
+    ? '<div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/' +
+      escapeHtml(videoId) +
+      '" title="' +
+      escapeHtml(project.title) +
+      ' video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
+    : "";
 
   root.innerHTML =
     '<article class="detail">' +
     '<p><a href="projects.html">Projects</a></p>' +
+    '<div class="detail-media">' +
+    '<img src="' +
+    escapeHtml(project.image) +
+    '" alt="" width="72" height="72" />' +
+    "<p class=\"project-dates\">" +
+    escapeHtml(dateRange(project)) +
+    "</p>" +
+    "</div>" +
     "<h1>" +
     escapeHtml(project.title) +
     "</h1>" +
+    videoHtml +
     "<p class=\"lede\">" +
     escapeHtml(project.description) +
     "</p>" +
