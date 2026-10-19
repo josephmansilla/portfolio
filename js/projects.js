@@ -11,17 +11,20 @@
 const TECH_STACK = ["Java", "JavaScript", "SQL", "Go", "Scala", "Ruby", "Haskell", "Python"];
 
 const TECHNOLOGIES = [
-  "Spring",
-  "Hibernate",
+  "SpringBoot",
   "React",
+  "Hibernate",
   "Microsoft SQL Server",
-  "MongoDB",
   "MySQL",
+  "MongoDB",
   "Express.js",
+  "Maven",
   "AWS",
   "Oracle Cloud",
   "Docker", 
   "Docker Compose",
+  "Portainer",
+  "Nginx",
 ];
 
 
@@ -44,23 +47,6 @@ const PROJECTS = [
   },
   {
     id: "p2",
-    title: "Full-Stack Incident Management Web Application",
-    description: "MetaMapa is a project developed as an integrator project for UTN's System Design class. It is a microservices-based distributed platform for collaborative mapping management designed to enhance collective intelligence. Developed with Java 17 and Spring.",
-    details: [
-      "Developed backend using Java and Spring, and built the frontend with HTML, CSS, JavaScript, and Thymeleaf.",
-      "Designed a scalable microservices architecture with RESTful APIs to enable efficient communication between services and support platform scalability.",
-      "Deployed the app with AWS, orchestrating Docker containers for each microservice in a production environment.",
-    ],
-    techs: [ "Java", "SpringBoot", "SQL","MySQL", "Maven", "CSS", "HTML", "JavaScript", "AWS", "Docker", "Hibernate", "Git"],
-    github: "https://github.com/josephmansilla/tp-dsi-full-stack-app-2025",
-    demo: "",
-    video: "",
-    start: "Apr 2025",
-    end: "Dec 2025",
-    image: "assets/images/metamapa.webp",
-  },
-  {
-    id: "p3",
     title: "Travel Database & Business Intelligence Platform",
     description: "This project implements a comprehensive Business Intelligence system for a travel agency offering tourism services developed as an integrator project for UTN's dababase class.",
     details: [
@@ -78,9 +64,26 @@ const PROJECTS = [
     image: "assets/images/octopus.webp",
   },
   {
+    id: "p3",
+    title: "Full-Stack Incident Management Web Application",
+    description: "MetaMapa is a project developed as an integrator project for UTN's System Design class. It is a microservices-based distributed platform for collaborative mapping management designed to enhance collective intelligence. Developed with Java 17 and Spring.",
+    details: [
+      "Developed backend using Java and Spring, and built the frontend with HTML, CSS, JavaScript, and Thymeleaf.",
+      "Designed a scalable microservices architecture with RESTful APIs to enable efficient communication between services and support platform scalability.",
+      "Deployed the app with AWS, orchestrating Docker containers for each microservice in a production environment.",
+    ],
+    techs: [ "Java", "SpringBoot", "SQL","MySQL", "Maven", "CSS", "HTML", "JavaScript", "AWS", "Docker", "Hibernate", "Git"],
+    github: "https://github.com/josephmansilla/tp-dsi-full-stack-app-2025",
+    demo: "",
+    video: "",
+    start: "Apr 2025",
+    end: "Dec 2025",
+    image: "assets/images/metamapa.webp",
+  },
+  {
     id: "p4",
     title: "Full-Stack Medical Appointment Platform",
-    description: "This project is an end-to-end software application developed as an integrator project for UTN's Software Engineering class. It covers the entire application lifecycle—from core domain modeling and database architecture to front-end development, containerization, cloud deployment, and automated testing.",
+    description: "This project is an end-to-end software application developed as an integrator project for UTN's Software Engineering class. Covering the entire application lifecycle: core domain modeling and database architecture to front-end development, containerization, cloud deployment, and automated testing.",
     details: [
       "Methodology & Core Domain: Developed using an iterative and incremental process, grounded in a refined Object-Oriented Programming (OOP) domain model.",
       "Backend & API Architecture: Powered by a self-documented RESTful API featuring robust concurrency control and race condition management.",
@@ -230,7 +233,7 @@ function chipList(items) {
     root.innerHTML =
       "<h1>Project not found</h1>" +
       '<p class="muted">That id is not in the projects list.</p>' +
-      '<p><a href="projects.html">Back to projects</a></p>';
+      '<p><a class="back-link" href="projects.html"><span class="icon-mask icon-arrow-left" aria-hidden="true"></span>Go back</a></p>';
     return;
   }
 
@@ -267,7 +270,7 @@ function chipList(items) {
 
   root.innerHTML =
     '<article class="detail">' +
-    '<p><a href="projects.html">Projects</a></p>' +
+    '<p><a class="back-link" href="projects.html"><span class="icon-mask icon-arrow-left" aria-hidden="true"></span>Go back</a></p>' +
     '<div class="detail-media">' +
     '<img src="' +
     escapeHtml(project.image) +

@@ -1,12 +1,3 @@
-/*
-  experience.js
-  (placeholder) Education, work, and courses.
-
-  Edit EXPERIENCE. type is "education", "work", or "course".
-  Courses stay hidden until this array has at least one course.
-  There is no per-card type badge: the section heading is the label.
-*/
-
 const EXPERIENCE = [
   {
     id: "edu-1",
@@ -16,19 +7,24 @@ const EXPERIENCE = [
     location: "Buenos Aires, Argentina",
     start: "2023",
     end: "Current",
+    image: "assets/images/education/utn.webp",
     bullets: [
-      
+      "Current GPA: 7.54/10.",
+      "Currently in my fourth year of studies.",
     ],
   },
   {
     id: "edu-2",
     type: "education",
-    title: "Bilingual High School Diploma in Social Sciences with Honors",
+    title: "Bilingual High School Diploma in Social Sciences",
     org: "Glasgow College",
     location: "Buenos Aires, Argentina",
     start: "2018",
     end: "2022",
-    bullets: ["Graduated with honors: top 3 of the class"],
+    image: "assets/images/education/glasgow.webp",
+    bullets: ["Graduated with honors: top 3 of the class.",
+      "Final GPA: 9.03/10.",
+    ],
   },
   {
     id: "edu-3",
@@ -36,8 +32,9 @@ const EXPERIENCE = [
     title: "International General Certificate of Secondary Education",
     org: "Cambridge University",
     location: "Buenos Aires, Argentina",
-    start: "2021",
+    start: "2020",
     end: "2022",
+    image: "assets/images/education/cambridge.webp",
     bullets: ["Passed with merits."],
   },
   {
@@ -48,19 +45,20 @@ const EXPERIENCE = [
     location: "Buenos Aires, Argentina",
     start: "2021",
     end: "",
-    bullets: ["C1 Level: Advanced", "Score: 185/190"],
+    image: "assets/images/education/cambridge.webp",
+    bullets: ["C1 Level: Advanced.", "Score: 185/190."],
   },
   {
     id: "work-1",
     type: "work",
-    title: "Teaching Assistant for Programming Paradimgs Course",
+    title: "Programming Paradigms' Teaching Assistant",
     org: "UTN FBRA",
     location: "Buenos Aires, Argentina",
     start: "2025",
     end: "Present",
     bullets: [
       "Collaborated in the design, preparation, and delivery of course materials, prog. assignments, and exams.",
-      "Mentored students in understanding and applying core programming concepts through practical exercises, fostering critical thinking and problem-solving skills",
+      "Mentored students in understanding and applying core programming concepts through practical exercises, fostering critical thinking and problem-solving skills.",
     ],
   },
   {
@@ -86,6 +84,13 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
+function formatDates(item) {
+  const start = String(item.start || "").trim();
+  const end = String(item.end || "").trim();
+  if (start && end) return escapeHtml(start) + " – " + escapeHtml(end);
+  return escapeHtml(start || end);
+}
+
 function experienceCard(item) {
   const bullets = item.bullets
     .map(function (line) {
@@ -93,28 +98,37 @@ function experienceCard(item) {
     })
     .join("");
 
+  const logo = item.image
+    ? '<img class="timeline-logo" src="' +
+      escapeHtml(item.image) +
+      '" alt="" width="44" height="44" />'
+    : "";
+
   return (
     '<li class="timeline-item">' +
-    '<article class="timeline-card">' +
+    '<article class="timeline-card' +
+    (logo ? " has-logo" : "") +
+    '">' +
+    logo +
+    "<div>" +
     "<h3>" +
     escapeHtml(item.title) +
     "</h3>" +
     '<p class="timeline-meta">' +
-    "<span>" +
+    '<span class="timeline-org">' +
     escapeHtml(item.org) +
     "</span>" +
     "<span>" +
     escapeHtml(item.location) +
     "</span>" +
     "<span>" +
-    escapeHtml(item.start) +
-    " – " +
-    escapeHtml(item.end) +
+    formatDates(item) +
     "</span>" +
     "</p>" +
     "<ul>" +
     bullets +
     "</ul>" +
+    "</div>" +
     "</article>" +
     "</li>"
   );

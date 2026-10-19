@@ -69,6 +69,8 @@
 .icon-discord { -webkit-mask-image: url("../assets/images/discord.svg"); mask-image: url("../assets/images/discord.svg"); }
 .icon-resume { -webkit-mask-image: url("../assets/images/resume.svg"); mask-image: url("../assets/images/resume.svg"); }
 .icon-arcade { -webkit-mask-image: url("../assets/images/arcade.svg"); mask-image: url("../assets/images/arcade.svg"); }
+.icon-arrow-left { -webkit-mask-image: url("../assets/images/arrow-left.svg"); mask-image: url("../assets/images/arrow-left.svg"); }
+.icon-pin { -webkit-mask-image: url("../assets/images/map-pin.svg"); mask-image: url("../assets/images/map-pin.svg"); }
 .icon-language { -webkit-mask-image: url("../assets/images/language.svg"); mask-image: url("../assets/images/language.svg"); }
 
 .lang-menu {
@@ -196,6 +198,19 @@
   color: var(--accent);
 }
 
+.place {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.place .icon-mask {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+  transform: translateY(-0.04em);
+}
+
 .hero h1 {
   font-size: clamp(2.2rem, 8vw, 4.2rem);
 }
@@ -235,6 +250,21 @@
   box-shadow: var(--shadow);
 }
 
+.timeline-card.has-logo {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.timeline-logo {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+  border-radius: 0.45rem;
+  background: var(--bg-muted);
+}
+
 .timeline-meta {
   display: flex;
   flex-wrap: wrap;
@@ -242,6 +272,11 @@
   color: var(--text-muted);
   font-size: 0.92rem;
   margin: 0.25rem 0 0.6rem;
+}
+
+.timeline-org {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .badge {
@@ -383,6 +418,19 @@
 
 .article-card h3 {
   color: var(--text);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.back-link .icon-mask {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .detail {
