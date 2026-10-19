@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700">
+  <defs>
+    <style>
+      .cls-1{fill:none;stroke:#000000;stroke-width:88;stroke-miterlimit:10}
+      .cls-2{fill:none;stroke:#000000;stroke-width:88;stroke-linecap:round;stroke-miterlimit:10}
+    </style>
+  </defs>
+  <title>Untitled-4</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M96.685 136.496 L340.062 136.496 C345.584 136.496 350.062 140.973 350.062 146.496 C350.062 146.496 350.062 399.119 350.062 557.162 C350.062 595.665 96.685 407.549 96.685 407.549" class="cls-1"/>
+    <path d="M1074.022 607.678 L1074.022 146.496 C1074.022 140.973 1071.638 140.285 1068.698 144.96 L963.439 312.282 C960.498 316.957 955.795 316.917 952.934 312.193 L851.716 145.049 C848.856 140.325 846.536 140.973 846.536 146.496 L846.536 607.678" class="cls-1"/>
+    <path d="M535.261 92.322 C535.261 244.43 535.261 494.254 535.261 558.743 L682.306 558.738" class="cls-1"/>
+    <path d="M467.863 213.523 L666.664 213.523" class="cls-2"/>
+    <path d="M673.312 558.735 L703.983 558.743" class="cls-2"/>
+    <path d="M89.374 402.736 L105.212 413.485" class="cls-2"/>
+  </g>
+</svg>
