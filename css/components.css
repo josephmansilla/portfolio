@@ -37,12 +37,78 @@
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   background: var(--bg-elevated);
-  color: var(--text);
+  color: var(--accent);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   transition: transform 100ms ease-out;
+}
+
+.icon-mask {
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.icon-home { -webkit-mask-image: url("../assets/images/home.svg"); mask-image: url("../assets/images/home.svg"); }
+.icon-github { -webkit-mask-image: url("../assets/images/github.svg"); mask-image: url("../assets/images/github.svg"); }
+.icon-linkedin { -webkit-mask-image: url("../assets/images/linkedin.svg"); mask-image: url("../assets/images/linkedin.svg"); }
+.icon-substack { -webkit-mask-image: url("../assets/images/substack-icon-original.svg"); mask-image: url("../assets/images/substack-icon-original.svg"); }
+.icon-youtube { -webkit-mask-image: url("../assets/images/youtube.svg"); mask-image: url("../assets/images/youtube.svg"); }
+.icon-mail { -webkit-mask-image: url("../assets/images/mail.svg"); mask-image: url("../assets/images/mail.svg"); }
+
+.lang-select {
+  min-height: 2.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 16px;
+}
+
+.hero-social,
+.contact-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.spoken-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.spoken-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 18rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.stack-block + .stack-block {
+  margin-top: 1.5rem;
+}
+
+.bio {
+  max-width: 38rem;
+  font-size: 1.125rem;
+  line-height: 1.55;
 }
 
 .icon-btn:active {
@@ -344,7 +410,8 @@
   }
 
   .icon-btn:hover,
-  .filter-btn:hover {
+  .filter-btn:hover,
+  .footer-social a:hover {
     background: var(--bg-muted);
   }
 

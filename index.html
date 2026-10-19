@@ -12,7 +12,7 @@
       name="description"
       content="Portfolio of Joseph Thomas Mansilla, Systems Engineering student in Buenos Aires."
     />
-    <title>Joseph Thomas Mansilla — Systems Engineering Student</title>
+    <title>JTM | Dev Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,39 +23,11 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body>
+  <body data-page="home">
     <div id="particles" aria-hidden="true"></div>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="logo" href="index.html">JTM</a>
-        <div class="header-actions">
-          <button
-            class="nav-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="site-nav"
-            data-nav-toggle
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="visually-hidden">Menu</span>
-          </button>
-          <nav class="site-nav" id="site-nav" data-nav aria-label="Primary">
-            <ul>
-              <li><a href="index.html" aria-current="page">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="experience.html">Experience</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="articles.html">Articles</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <div id="site-header"></div>
 
     <main id="main" class="site-main">
       <section class="hero">
@@ -63,10 +35,11 @@
           <p class="kicker">Buenos Aires, Argentina</p>
           <h1>Joseph Thomas Mansilla</h1>
           <p class="lede">Systems Engineering Student</p>
-          <p>
+          <p class="bio">
             Building maintainable software with a focus on system design,
             architecture, and continuous learning.
           </p>
+          <div class="hero-social" data-social></div>
           <div class="hero-actions">
             <a class="btn" href="projects.html">Projects</a>
             <a class="btn btn-ghost" href="contact.html">Contact</a>
@@ -75,17 +48,11 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <p>© <span data-year></span> Joseph Thomas Mansilla</p>
-        <div class="footer-links">
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-    </footer>
+    <div id="site-footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/shell.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
