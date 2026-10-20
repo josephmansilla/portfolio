@@ -146,7 +146,7 @@ var RESUME_FILES = {
       '">' +
       social +
       "</nav>" +
-      '<p class="footer-made"><span data-i18n="footer.made">Made with</span> <span class="footer-heart" aria-hidden="true">❤️</span></p>' +
+      '<p class="footer-made"><span data-i18n="footer.made">Made with</span> <span class="footer-heart" aria-hidden="true">❤️</span> <span data-i18n="footer.by">by</span></p>' +
       "<p>© <span data-year></span> Joseph Thomas Mansilla</p>" +
       "</div></footer>";
   }

@@ -22,7 +22,9 @@
     made.innerHTML =
       '<span data-i18n="footer.made">' +
       (typeof t === "function" ? t("footer.made") : "Made with") +
-      '</span> <span class="footer-heart" aria-hidden="true">❤️</span>';
+      '</span> <span class="footer-heart" aria-hidden="true">❤️</span> <span data-i18n="footer.by">' +
+      (typeof t === "function" ? t("footer.by") : "by") +
+      "</span>";
     var copy = inner.querySelector("p:last-of-type");
     if (copy) inner.insertBefore(made, copy);
     else inner.appendChild(made);

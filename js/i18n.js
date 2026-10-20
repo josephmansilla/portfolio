@@ -111,6 +111,7 @@ var I18N = {
     },
     footer: {
       made: "Made with",
+      by: "by",
     },
     game: {
       kicker: "Play",
@@ -229,6 +230,7 @@ var I18N = {
     },
     footer: {
       made: "Hecho con",
+      by: "por",
     },
     game: {
       kicker: "Jugar",
@@ -347,6 +349,7 @@ var I18N = {
     },
     footer: {
       made: "Feito com",
+      by: "por",
     },
     game: {
       kicker: "Jogar",
