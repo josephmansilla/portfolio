@@ -218,22 +218,6 @@ body[data-page="home"] .logo {
   grid-row: 3;
 }
 
-.about-skills {
-  grid-column: 1 / -1;
-  grid-row: 4;
-  display: grid;
-  gap: 1.75rem;
-  margin-top: 0.6rem;
-}
-
-.about-skills .stack-block + .stack-block {
-  margin-top: 0;
-}
-
-.about-skills .stack-block + .stack-block {
-  margin-top: 0;
-}
-
 .headshot {
   grid-column: 2;
   grid-row: 1;
@@ -364,7 +348,6 @@ body[data-page="home"] .logo {
 
   .about-bios,
   .about-copy,
-  .about-skills,
   .headshot,
   .about-layout .section-head {
     grid-column: auto;
@@ -373,10 +356,6 @@ body[data-page="home"] .logo {
 
   .about-bios {
     margin-top: 1rem;
-  }
-
-  .about-skills {
-    margin-top: 2.25rem;
   }
 
   .about-side {

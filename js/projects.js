@@ -1,45 +1,47 @@
 const PROJECTS = [
   {
-    id: "p1",
+    id: "p8",
     title: {
-      en: "Operating System from Scratch",
-      es: "Sistema operativo desde cero",
-      pt: "Sistema operacional do zero",
+      en: "Home Lab & Network",
+      es: "Homelab y red casera",
+      pt: "Homelab e rede doméstica",
     },
     description: {
-      en: "This integrator project was developed throughout UTN's Operating Systems class, focusing on the simulation of a distributed operating system. Kernel, CPU, memory, and IO run as separate modules and talk over HTTP, with memory in charge of page tables and swap.",
-      es: "Este proyecto integrador se desarrolló a lo largo de la materia Sistemas Operativos de la UTN y se centra en la simulación de un sistema operativo distribuido. Kernel, CPU, memoria y E/S corren como módulos separados y se hablan por HTTP, y la memoria se encarga de las tablas de páginas y del swap.",
-      pt: "Este projeto integrador foi desenvolvido ao longo da disciplina de Sistemas Operacionais da UTN e se concentra na simulação de um sistema operacional distribuído. Kernel, CPU, memória e E/S rodam como módulos separados e se falam por HTTP, e a memória cuida das tabelas de páginas e do swap.",
+      en: "Homelab in progress: fiber into a modem, then a Ruijie Wi‑Fi 6 AX3000 router and a Cudy switch that feed my PC and a screenless MacBook. On that machine, I host game servers, my own apps, and a safe testing environment; Pi-hole filters ads for the whole network; Proxmox and Docker Compose handle operation and orchestration.",
+      es: "Homelab en marcha: fibra a un módem, después un router Ruijie Wi‑Fi 6 AX3000 y un switch Cudy que alimentan mi PC y una MacBook sin pantalla. En esa máquina, se logró alojar servidores de juegos, apps propias y un entorno para probar con seguridad; Pi-hole filtra publicidad para toda la red; Proxmox y Docker Compose permiten el funcionamiento y la orquestación.",
+      pt: "Homelab em andamento: fibra num modem, depois um roteador Ruijie Wi‑Fi 6 AX3000 e um switch Cudy que alimentam meu PC e um MacBook sem tela. Nessa máquina, passei a hospedar servidores de jogos, apps próprias e um ambiente para testar com segurança; o Pi-hole filtra anúncios para toda a rede; Proxmox e Docker Compose permitem o funcionamento e a orquestração.",
     },
     details: {
       en: [
-        "The work of the operating system is split across four modules that talk to each other over HTTP: Kernel, CPU, Memory, and IO. The Kernel schedules processes in the short, medium, and long term and holds the connections to the other three. The CPU interprets instructions and keeps a TLB and a page cache. IO stands in for a device and leaves the process waiting while an operation runs.",
-        "Memory owns user space, the page tables, and swap. I built that module. It gives each process its address space, keeps the page tables, and moves pages out to swap when they have to leave main memory. The Kernel and the CPU reach it through the same HTTP API.",
-        "The modules run concurrently in Go. Scheduling, instruction execution, and device operations proceed at the same time, and Memory answers reads and writes without mixing one process's address space with another's.",
+        "The chain starts with fiber into a modem, then a Ruijie Wi‑Fi 6 AX3000 router, and a four‑port Cudy switch. That switch hands out wired LAN to my personal PC and to a server laptop whose built‑in display no longer works; the laptop runs headless in a corner.",
+        "Proxmox on the laptop hosts VMs and workloads. Services are orchestrated with Docker Compose. Nginx acts as a reverse proxy in front of what I publish. Pi-hole filters ads at the network level, and Tailscale with split DNS lets me reach the lab remotely without exposing every port.",
+        "Game servers, small apps I build myself, and an isolated space to try ideas safely all run on this stack. It is a hands‑on home project I plan to keep expanding as hardware and requirements grow.",
       ],
       es: [
-        "El trabajo del sistema operativo se reparte en cuatro módulos que se hablan por HTTP: Kernel, CPU, Memoria y E/S. El Kernel planifica procesos a corto, mediano y largo plazo y mantiene las conexiones con los otros tres. La CPU interpreta instrucciones y conserva una TLB y una caché de páginas. E/S simula un dispositivo y deja al proceso en espera mientras dura la operación.",
-        "Memoria administra el espacio de usuario, las tablas de páginas y el swap. Me encargué de ese módulo. Asigna el espacio de cada proceso, mantiene las tablas de páginas y mueve páginas a swap cuando tienen que salir de la memoria principal. El Kernel y la CPU llegan a ella por la misma API HTTP.",
-        "Los módulos corren a la vez, en Go. La planificación, la ejecución de instrucciones y las operaciones de dispositivo avanzan en paralelo, y Memoria responde lecturas y escrituras sin mezclar el espacio de un proceso con el de otro.",
+        "La cadena arranca con fibra óptica a un módem, sigue un router Ruijie Wi‑Fi 6 AX3000 y un switch Cudy de cuatro puertos. Ese switch reparte LAN por cable a mi PC personal y a una laptop servidor cuya pantalla integrada ya no funciona; la laptop corre sin monitor en un rincón.",
+        "Proxmox en esa laptop aloja VMs y cargas. Los servicios se orquestan con Docker Compose. Nginx hace de proxy inverso de lo que publico. Pi-hole filtra publicidad a nivel de red, y Tailscale con DNS repartido me permite llegar al lab desde afuera sin abrir todos los puertos.",
+        "Servidores de juegos, aplicaciones propias y un espacio aislado para probar ideas con seguridad corren en este stack. Es un proyecto casero manual que quiero seguir ampliando según el hardware y lo que necesite.",
       ],
       pt: [
-        "O trabalho do sistema operacional se divide em quatro módulos que se falam por HTTP: Kernel, CPU, Memória e E/S. O Kernel escalona processos no curto, médio e longo prazo e mantém as conexões com os outros três. A CPU interpreta instruções e guarda uma TLB e um cache de páginas. E/S simula um dispositivo e deixa o processo esperando enquanto a operação dura.",
-        "Memória administra o espaço de usuário, as tabelas de páginas e o swap. Fiquei com esse módulo. Ele entrega o espaço de cada processo, mantém as tabelas de páginas e move páginas para o swap quando elas têm de sair da memória principal. O Kernel e a CPU chegam nela pela mesma API HTTP.",
-        "Os módulos rodam ao mesmo tempo, em Go. O escalonamento, a execução de instruções e as operações de dispositivo avançam em paralelo, e a Memória responde leituras e escritas sem misturar o espaço de um processo com o de outro.",
+        "A cadeia começa com fibra óptica num modem, segue um roteador Ruijie Wi‑Fi 6 AX3000 e um switch Cudy de quatro portas. Esse switch distribui LAN cabeada ao meu PC pessoal e a um notebook servidor cuja tela integrada não funciona mais; o notebook roda sem monitor num canto.",
+        "O Proxmox nesse notebook hospeda VMs e cargas. Os serviços são orquestrados com Docker Compose. O Nginx atua como proxy reverso do que publico. O Pi-hole filtra anúncios em nível de rede, e o Tailscale com DNS repartido me deixa chegar ao lab de fora sem expor todas as portas.",
+        "Servidores de jogos, aplicativos próprios e um espaço isolado para testar ideias com segurança rodam nessa pilha. É um projeto doméstico feito na mão que pretendo continuar expandindo conforme o hardware e as necessidades crescem.",
       ],
     },
     techs: [
-      { name: "Go", filter: true },
-      { name: "Multithreading" },
-      { name: "Concurrency" },
-      { name: "Git", card: false },
+      { name: "Proxmox" },
+      { name: "Docker Compose" },
+      { name: "Pi-hole" },
+      { name: "Nginx" },
+      { name: "Tailscale" },
+      { name: "Docker", filter: true },
     ],
-    github: "https://github.com/josephmansilla/tp-sistemas-operativos-1c-2025",
+    github: "",
     demo: "",
-    video: "https://www.youtube.com/watch?v=twMAzy64x6Q",
-    start: "Apr 2025",
-    end: "Jul 2025",
-    image: "assets/images/boca-gopher.png",
+    video: "",
+    start: "Sep 2026",
+    end: "",
+    image: "assets/images/homelab.webp",
   },
   {
     id: "p2",
@@ -86,58 +88,46 @@ const PROJECTS = [
     image: "assets/images/octopus.webp",
   },
   {
-    id: "p3",
+    id: "p1",
     title: {
-      en: "Full-Stack Incident Management Web Application",
-      es: "Aplicación web full-stack de gestión de incidentes",
-      pt: "Aplicação web full-stack de gestão de incidentes",
+      en: "Operating System from Scratch",
+      es: "Sistema operativo desde cero",
+      pt: "Sistema operacional do zero",
     },
     description: {
-      en: "MetaMapa is a project developed as an integrator project for UTN's System Design class. It is a microservices-based distributed platform for collaborative mapping management designed to enhance collective intelligence. Developed with Java 17 and Spring.",
-      es: "MetaMapa es el proyecto integrador de la materia Diseño de Sistemas de la UTN. Es una plataforma distribuida de microservicios para la gestión colaborativa de mapas, pensada para mejorar la inteligencia colectiva. Desarrollada con Java 17 y Spring.",
-      pt: "MetaMapa é o projeto integrador da disciplina de Projeto de Sistemas da UTN. É uma plataforma distribuída de microsserviços para a gestão colaborativa de mapas, pensada para melhorar a inteligência coletiva. Desenvolvida com Java 17 e Spring.",
+      en: "This integrator project was developed throughout UTN's Operating Systems class, focusing on the simulation of a distributed operating system. Kernel, CPU, memory, and IO run as separate modules and talk over HTTP, with memory in charge of page tables and swap.",
+      es: "Este proyecto integrador se desarrolló a lo largo de la materia Sistemas Operativos de la UTN y se centra en la simulación de un sistema operativo distribuido. Kernel, CPU, memoria y E/S corren como módulos separados y se hablan por HTTP, y la memoria se encarga de las tablas de páginas y del swap.",
+      pt: "Este projeto integrador foi desenvolvido ao longo da disciplina de Sistemas Operacionais da UTN e se concentra na simulação de um sistema operacional distribuído. Kernel, CPU, memória e E/S rodam como módulos separados e se falam por HTTP, e a memória cuida das tabelas de páginas e do swap.",
     },
     details: {
       en: [
-        "Communities, NGOs, and public agencies record events on a map: a fire, a contaminated area, a flood, a disappearance. Anyone can browse the map without an account. A contributor, anonymous or registered, posts a fact with text and media and can edit it for seven days. An administrator moderates collections, deletion requests, and the consensus rule.",
-        "Facts arrive from three kinds of sources. A static source parses CSV files of more than 10,000 rows. A dynamic source stores what people submit. A proxy source adapts external REST APIs into the same fact shape. A collection pulls from several sources and keeps or drops facts with a configurable rule: simple majority, absolute majority, multiple mentions, or none.",
-        "A normalizer asks a sentence-transformer model whether a new title is too close to one already stored. Similarity at or above 0.7 counts as a duplicate. A deletion request needs a written justification of at least 500 characters, and an anti-spam filter sits beside the moderation queue. Statistics export by province, category, and spam level, as JSON or CSV.",
-        "The backend is a set of Spring Boot services behind a gateway: JWT authentication, the three sources, an aggregator for collections and consensus, and a statistics service. The browser UI is Thymeleaf. Services call each other with a non-blocking HTTP client, and each one runs in its own Docker container.",
+        "The work of the operating system is split across four modules that talk to each other over HTTP: Kernel, CPU, Memory, and IO. The Kernel schedules processes in the short, medium, and long term and holds the connections to the other three. The CPU interprets instructions and keeps a TLB and a page cache. IO stands in for a device and leaves the process waiting while an operation runs.",
+        "Memory owns user space, the page tables, and swap. I built that module. It gives each process its address space, keeps the page tables, and moves pages out to swap when they have to leave main memory. The Kernel and the CPU reach it through the same HTTP API.",
+        "The modules run concurrently in Go. Scheduling, instruction execution, and device operations proceed at the same time, and Memory answers reads and writes without mixing one process's address space with another's.",
       ],
       es: [
-        "Comunidades, ONG y organismos públicos cargan hechos en un mapa: un incendio, una zona contaminada, una inundación, una desaparición. Cualquiera puede mirar el mapa sin cuenta. Un contribuyente, anónimo o registrado, publica un hecho con texto y medios y puede editarlo durante siete días. Un administrador modera colecciones, pedidos de baja y la regla de consenso.",
-        "Los hechos entran por tres tipos de fuente. La estática lee CSV de más de 10.000 filas. La dinámica guarda lo que cargan las personas. El proxy adapta APIs REST externas al mismo formato. Una colección junta varias fuentes y conserva o descarta hechos según una regla configurable: mayoría simple, mayoría absoluta, menciones múltiples o ninguna.",
-        "Un normalizador consulta un modelo de embeddings para ver si el título nuevo se parece demasiado a uno ya guardado. Una similitud de 0,7 o más cuenta como duplicado. Un pedido de eliminación exige una justificación de al menos 500 caracteres, y un filtro anti-spam acompaña la cola de moderación. Las estadísticas se exportan por provincia, categoría y nivel de spam, en JSON o CSV.",
-        "El backend son servicios Spring Boot detrás de un gateway: autenticación con JWT, las tres fuentes, un agregador de colecciones y consenso, y un servicio de estadísticas. La interfaz es Thymeleaf. Los servicios se llaman entre sí con un cliente HTTP no bloqueante, y cada uno corre en su propio contenedor Docker.",
+        "El trabajo del sistema operativo se reparte en cuatro módulos que se hablan por HTTP: Kernel, CPU, Memoria y E/S. El Kernel planifica procesos a corto, mediano y largo plazo y mantiene las conexiones con los otros tres. La CPU interpreta instrucciones y conserva una TLB y una caché de páginas. E/S simula un dispositivo y deja al proceso en espera mientras dura la operación.",
+        "Memoria administra el espacio de usuario, las tablas de páginas y el swap. Me encargué de ese módulo. Asigna el espacio de cada proceso, mantiene las tablas de páginas y mueve páginas a swap cuando tienen que salir de la memoria principal. El Kernel y la CPU llegan a ella por la misma API HTTP.",
+        "Los módulos corren a la vez, en Go. La planificación, la ejecución de instrucciones y las operaciones de dispositivo avanzan en paralelo, y Memoria responde lecturas y escrituras sin mezclar el espacio de un proceso con el de otro.",
       ],
       pt: [
-        "Comunidades, ONGs e órgãos públicos registram eventos num mapa: um incêndio, uma área contaminada, uma inundação, um desaparecimento. Qualquer pessoa pode ver o mapa sem conta. Um contribuidor, anônimo ou registrado, publica um fato com texto e mídia e pode editá-lo por sete dias. Um administrador modera coleções, pedidos de exclusão e a regra de consenso.",
-        "Os fatos entram por três tipos de fonte. A estática lê CSV com mais de 10.000 linhas. A dinâmica guarda o que as pessoas enviam. O proxy adapta APIs REST externas ao mesmo formato. Uma coleção junta várias fontes e mantém ou descarta fatos segundo uma regra configurável: maioria simples, maioria absoluta, menções múltiplas ou nenhuma.",
-        "Um normalizador consulta um modelo de embeddings para ver se o título novo está perto demais de um já gravado. Similaridade de 0,7 ou mais conta como duplicata. Um pedido de exclusão exige uma justificativa de pelo menos 500 caracteres, e um filtro anti-spam acompanha a fila de moderação. As estatísticas saem por província, categoria e nível de spam, em JSON ou CSV.",
-        "O backend é um conjunto de serviços Spring Boot atrás de um gateway: autenticação com JWT, as três fontes, um agregador de coleções e consenso, e um serviço de estatísticas. A interface é Thymeleaf. Os serviços se chamam com um cliente HTTP não bloqueante, e cada um roda no próprio contêiner Docker.",
+        "O trabalho do sistema operacional se divide em quatro módulos que se falam por HTTP: Kernel, CPU, Memória e E/S. O Kernel escalona processos no curto, médio e longo prazo e mantém as conexões com os outros três. A CPU interpreta instruções e guarda uma TLB e um cache de páginas. E/S simula um dispositivo e deixa o processo esperando enquanto a operação dura.",
+        "Memória administra o espaço de usuário, as tabelas de páginas e o swap. Fiquei com esse módulo. Ele entrega o espaço de cada processo, mantém as tabelas de páginas e move páginas para o swap quando elas têm de sair da memória principal. O Kernel e a CPU chegam nela pela mesma API HTTP.",
+        "Os módulos rodam ao mesmo tempo, em Go. O escalonamento, a execução de instruções e as operações de dispositivo avançam em paralelo, e a Memória responde leituras e escritas sem misturar o espaço de um processo com o de outro.",
       ],
     },
     techs: [
-      { name: "Java", filter: true },
-      { name: "SpringBoot", filter: true },
-      { name: "MySQL" },
-      { name: "Docker", filter: true },
-      { name: "AWS" },
-      { name: "SQL", filter: true, card: false },
-      { name: "JavaScript", filter: true, card: false },
-      { name: "Hibernate", card: true },
-      { name: "Maven"},
-      { name: "Docker Compose" },
-      { name: "CSS", card: false },
-      { name: "HTML", card: false },
+      { name: "Go", filter: true },
+      { name: "Multithreading" },
+      { name: "Concurrency" },
       { name: "Git", card: false },
     ],
-    github: "https://github.com/josephmansilla/tp-dsi-full-stack-app-2025",
+    github: "https://github.com/josephmansilla/tp-sistemas-operativos-1c-2025",
     demo: "",
-    video: "",
+    video: "https://www.youtube.com/watch?v=twMAzy64x6Q",
     start: "Apr 2025",
-    end: "Dec 2025",
-    image: "assets/images/metamapa.webp",
+    end: "Jul 2025",
+    image: "assets/images/boca-gopher.png",
   },
   {
     id: "p4",
@@ -198,7 +188,103 @@ const PROJECTS = [
     end: "Jul 2026",
     image: "assets/images/sweetmedical.webp",
   },
-  
+  {
+    id: "p3",
+    title: {
+      en: "Full-Stack Incident Management Web Application",
+      es: "Aplicación web full-stack de gestión de incidentes",
+      pt: "Aplicação web full-stack de gestão de incidentes",
+    },
+    description: {
+      en: "MetaMapa is a project developed as an integrator project for UTN's System Design class. It is a microservices-based distributed platform for collaborative mapping management designed to enhance collective intelligence. Developed with Java 17 and Spring.",
+      es: "MetaMapa es el proyecto integrador de la materia Diseño de Sistemas de la UTN. Es una plataforma distribuida de microservicios para la gestión colaborativa de mapas, pensada para mejorar la inteligencia colectiva. Desarrollada con Java 17 y Spring.",
+      pt: "MetaMapa é o projeto integrador da disciplina de Projeto de Sistemas da UTN. É uma plataforma distribuída de microsserviços para a gestão colaborativa de mapas, pensada para melhorar a inteligência coletiva. Desenvolvida com Java 17 e Spring.",
+    },
+    details: {
+      en: [
+        "Communities, NGOs, and public agencies record events on a map: a fire, a contaminated area, a flood, a disappearance. Anyone can browse the map without an account. A contributor, anonymous or registered, posts a fact with text and media and can edit it for seven days. An administrator moderates collections, deletion requests, and the consensus rule.",
+        "Facts arrive from three kinds of sources. A static source parses CSV files of more than 10,000 rows. A dynamic source stores what people submit. A proxy source adapts external REST APIs into the same fact shape. A collection pulls from several sources and keeps or drops facts with a configurable rule: simple majority, absolute majority, multiple mentions, or none.",
+        "A normalizer asks a sentence-transformer model whether a new title is too close to one already stored. Similarity at or above 0.7 counts as a duplicate. A deletion request needs a written justification of at least 500 characters, and an anti-spam filter sits beside the moderation queue. Statistics export by province, category, and spam level, as JSON or CSV.",
+        "The backend is a set of Spring Boot services behind a gateway: JWT authentication, the three sources, an aggregator for collections and consensus, and a statistics service. The browser UI is Thymeleaf. Services call each other with a non-blocking HTTP client, and each one runs in its own Docker container.",
+      ],
+      es: [
+        "Comunidades, ONG y organismos públicos cargan hechos en un mapa: un incendio, una zona contaminada, una inundación, una desaparición. Cualquiera puede mirar el mapa sin cuenta. Un contribuyente, anónimo o registrado, publica un hecho con texto y medios y puede editarlo durante siete días. Un administrador modera colecciones, pedidos de baja y la regla de consenso.",
+        "Los hechos entran por tres tipos de fuente. La estática lee CSV de más de 10.000 filas. La dinámica guarda lo que cargan las personas. El proxy adapta APIs REST externas al mismo formato. Una colección junta varias fuentes y conserva o descarta hechos según una regla configurable: mayoría simple, mayoría absoluta, menciones múltiples o ninguna.",
+        "Un normalizador consulta un modelo de embeddings para ver si el título nuevo se parece demasiado a uno ya guardado. Una similitud de 0,7 o más cuenta como duplicado. Un pedido de eliminación exige una justificación de al menos 500 caracteres, y un filtro anti-spam acompaña la cola de moderación. Las estadísticas se exportan por provincia, categoría y nivel de spam, en JSON o CSV.",
+        "El backend son servicios Spring Boot detrás de un gateway: autenticación con JWT, las tres fuentes, un agregador de colecciones y consenso, y un servicio de estadísticas. La interfaz es Thymeleaf. Los servicios se llaman entre sí con un cliente HTTP no bloqueante, y cada uno corre en su propio contenedor Docker.",
+      ],
+      pt: [
+        "Comunidades, ONGs e órgãos públicos registram eventos num mapa: um incêndio, uma área contaminada, uma inundação, um desaparecimento. Qualquer pessoa pode ver o mapa sem conta. Um contribuidor, anônimo ou registrado, publica um fato com texto e mídia e pode editá-lo por sete dias. Um administrador modera coleções, pedidos de exclusão e a regra de consenso.",
+        "Os fatos entram por três tipos de fonte. A estática lê CSV com mais de 10.000 linhas. A dinâmica guarda o que as pessoas enviam. O proxy adapta APIs REST externas ao mesmo formato. Uma coleção junta várias fontes e mantém ou descarta fatos segundo uma regra configurável: maioria simples, maioria absoluta, menções múltiplas ou nenhuma.",
+        "Um normalizador consulta um modelo de embeddings para ver se o título novo está perto demais de um já gravado. Similaridade de 0,7 ou mais conta como duplicata. Um pedido de exclusão exige uma justificativa de pelo menos 500 caracteres, e um filtro anti-spam acompanha a fila de moderação. As estatísticas saem por província, categoria e nível de spam, em JSON ou CSV.",
+        "O backend é um conjunto de serviços Spring Boot atrás de um gateway: autenticação com JWT, as três fontes, um agregador de coleções e consenso, e um serviço de estatísticas. A interface é Thymeleaf. Os serviços se chamam com um cliente HTTP não bloqueante, e cada um roda no próprio contêiner Docker.",
+      ],
+    },
+    techs: [
+      { name: "Java", filter: true },
+      { name: "SpringBoot", filter: true },
+      { name: "MySQL" },
+      { name: "Docker", filter: true },
+      { name: "AWS" },
+      { name: "SQL", filter: true, card: false },
+      { name: "JavaScript", filter: true, card: false },
+      { name: "Hibernate", card: true },
+      { name: "Maven"},
+      { name: "Docker Compose" },
+      { name: "CSS", card: false },
+      { name: "HTML", card: false },
+      { name: "Git", card: false },
+    ],
+    github: "https://github.com/josephmansilla/tp-dsi-full-stack-app-2025",
+    demo: "",
+    video: "",
+    start: "Apr 2025",
+    end: "Dec 2025",
+    image: "assets/images/metamapa.webp",
+  },
+  {
+    id: "p6",
+    title: {
+      en: "Object to XML parser",
+      es: "Objeto a XML parser",
+      pt: "Objeto a XML parser",
+    },
+    description: {
+      en: "A Ruby framework from UTN's Advanced Programming Techniques course. It builds XML with a small internal DSL and serializes any object through annotations, using metaprogramming instead of an external parser.",
+      es: "Framework en Ruby de Técnicas Avanzadas de Programación de la UTN. Arma XML con un DSL interno y serializa cualquier objeto mediante anotaciones, con metaprogramación y sin un parser externo.",
+      pt: "Framework em Ruby de Técnicas Avançadas de Programação da UTN. Monta XML com uma DSL interna e serializa qualquer objeto por meio de anotações, com metaprogramação e sem um parser externo.",
+    },
+    details: {
+      en: [
+        "Document.new runs its block with instance_eval. Unknown messages become nested tags, and keyword arguments become attributes, so a document reads like the XML it prints.",
+        "Document.serialize inspects any instance. The class name is the root tag, primitives with a getter become attributes, arrays become one child tag per element, and nested objects are walked recursively.",
+        "Annotations are declared with a ✨Name✨ marker just above a class, method, or accessor. method_added and inherited hooks bind the pending annotation to the next definition, including generated attr_reader and attr_accessor.",
+        "Label, Ignore, Inline, Custom, Extra, and Expand change names, drop fields, flatten values, or replace the default strategy. Validate, Default, and Mask were added later without touching the serializer core. Mask keeps only the last N characters of a sensitive value.",
+      ],
+      es: [
+        "Document.new ejecuta su bloque con instance_eval. Los mensajes desconocidos se vuelven etiquetas anidadas y los argumentos con nombre, atributos, así que el documento se lee parecido al XML que imprime.",
+        "Document.serialize inspecciona cualquier instancia. El nombre de la clase es la etiqueta raíz, los primitivos con getter pasan a atributos, los arrays generan una etiqueta hija por elemento y los objetos anidados se recorren de forma recursiva.",
+        "Las anotaciones se declaran con un marcador ✨Nombre✨ justo arriba de una clase, un método o un accesor. Los hooks method_added e inherited enganchan la anotación pendiente a la definición siguiente, incluidos attr_reader y attr_accessor generados.",
+        "Label, Ignore, Inline, Custom, Extra y Expand cambian nombres, omiten campos, aplanan valores o reemplazan la estrategia por defecto. Validate, Default y Mask se sumaron después sin tocar el núcleo del serializador. Mask deja solo los últimos N caracteres de un dato sensible.",
+      ],
+      pt: [
+        "Document.new executa o bloco com instance_eval. Mensagens desconhecidas viram tags aninhadas e os argumentos nomeados viram atributos, então o documento se lê parecido com o XML que imprime.",
+        "Document.serialize inspeciona qualquer instância. O nome da classe é a tag raiz, primitivos com getter viram atributos, arrays geram uma tag filha por elemento e objetos aninhados são percorridos de forma recursiva.",
+        "As anotações são declaradas com um marcador ✨Nome✨ logo acima de uma classe, um método ou um acessor. Os hooks method_added e inherited ligam a anotação pendente à definição seguinte, inclusive attr_reader e attr_accessor gerados.",
+        "Label, Ignore, Inline, Custom, Extra e Expand mudam nomes, omitem campos, achatam valores ou substituem a estratégia padrão. Validate, Default e Mask entraram depois sem mexer no núcleo do serializador. Mask deixa só os últimos N caracteres de um dado sensível.",
+      ],
+    },
+    techs: [
+      { name: "Ruby", filter: true },
+      { name: "Git", card: false },
+    ],
+    github: "https://github.com/josephmansilla/cursada-tadp-2025/tree/main/xml-parser",
+    demo: "",
+    video: "",
+    start: "Aug 2025",
+    end: "Sep 2025",
+    image: "assets/images/xml.svg",
+  },
   {
     id: "p5",
     title: {
@@ -244,49 +330,6 @@ const PROJECTS = [
     start: "Oct 2025",
     end: "Nov 2025",
     image: "assets/images/dungeon.webp",
-  },
-  {
-    id: "p6",
-    title: {
-      en: "Object to XML parser",
-      es: "Objeto a XML parser",
-      pt: "Objeto a XML parser",
-    },
-    description: {
-      en: "A Ruby framework from UTN's Advanced Programming Techniques course. It builds XML with a small internal DSL and serializes any object through annotations, using metaprogramming instead of an external parser.",
-      es: "Framework en Ruby de Técnicas Avanzadas de Programación de la UTN. Arma XML con un DSL interno y serializa cualquier objeto mediante anotaciones, con metaprogramación y sin un parser externo.",
-      pt: "Framework em Ruby de Técnicas Avançadas de Programação da UTN. Monta XML com uma DSL interna e serializa qualquer objeto por meio de anotações, com metaprogramação e sem um parser externo.",
-    },
-    details: {
-      en: [
-        "Document.new runs its block with instance_eval. Unknown messages become nested tags, and keyword arguments become attributes, so a document reads like the XML it prints.",
-        "Document.serialize inspects any instance. The class name is the root tag, primitives with a getter become attributes, arrays become one child tag per element, and nested objects are walked recursively.",
-        "Annotations are declared with a ✨Name✨ marker just above a class, method, or accessor. method_added and inherited hooks bind the pending annotation to the next definition, including generated attr_reader and attr_accessor.",
-        "Label, Ignore, Inline, Custom, Extra, and Expand change names, drop fields, flatten values, or replace the default strategy. Validate, Default, and Mask were added later without touching the serializer core. Mask keeps only the last N characters of a sensitive value.",
-      ],
-      es: [
-        "Document.new ejecuta su bloque con instance_eval. Los mensajes desconocidos se vuelven etiquetas anidadas y los argumentos con nombre, atributos, así que el documento se lee parecido al XML que imprime.",
-        "Document.serialize inspecciona cualquier instancia. El nombre de la clase es la etiqueta raíz, los primitivos con getter pasan a atributos, los arrays generan una etiqueta hija por elemento y los objetos anidados se recorren de forma recursiva.",
-        "Las anotaciones se declaran con un marcador ✨Nombre✨ justo arriba de una clase, un método o un accesor. Los hooks method_added e inherited enganchan la anotación pendiente a la definición siguiente, incluidos attr_reader y attr_accessor generados.",
-        "Label, Ignore, Inline, Custom, Extra y Expand cambian nombres, omiten campos, aplanan valores o reemplazan la estrategia por defecto. Validate, Default y Mask se sumaron después sin tocar el núcleo del serializador. Mask deja solo los últimos N caracteres de un dato sensible.",
-      ],
-      pt: [
-        "Document.new executa o bloco com instance_eval. Mensagens desconhecidas viram tags aninhadas e os argumentos nomeados viram atributos, então o documento se lê parecido com o XML que imprime.",
-        "Document.serialize inspeciona qualquer instância. O nome da classe é a tag raiz, primitivos com getter viram atributos, arrays geram uma tag filha por elemento e objetos aninhados são percorridos de forma recursiva.",
-        "As anotações são declaradas com um marcador ✨Nome✨ logo acima de uma classe, um método ou um acessor. Os hooks method_added e inherited ligam a anotação pendente à definição seguinte, inclusive attr_reader e attr_accessor gerados.",
-        "Label, Ignore, Inline, Custom, Extra e Expand mudam nomes, omitem campos, achatam valores ou substituem a estratégia padrão. Validate, Default e Mask entraram depois sem mexer no núcleo do serializador. Mask deixa só os últimos N caracteres de um dado sensível.",
-      ],
-    },
-    techs: [
-      { name: "Ruby", filter: true },
-      { name: "Git", card: false },
-    ],
-    github: "https://github.com/josephmansilla/cursada-tadp-2025/tree/main/xml-parser",
-    demo: "",
-    video: "",
-    start: "Aug 2025",
-    end: "Sep 2025",
-    image: "assets/images/xml.svg",
   },
   {
     id: "p7",
@@ -335,6 +378,7 @@ const PROJECTS = [
   },
 ];
 
+
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -367,7 +411,11 @@ function localizeDate(value) {
 
 function dateRange(project) {
   var start = localizeDate(project.start);
-  var end = localizeDate(project.end);
+  var end = project.end
+    ? localizeDate(project.end)
+    : project.start
+      ? t("time.current")
+      : "";
   if (start && end) return start + " – " + end;
   return start || end || "";
 }

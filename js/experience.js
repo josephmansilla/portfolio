@@ -14,16 +14,16 @@ const EXPERIENCE = [
     image: "assets/images/education/utn.webp",
     bullets: {
       en: [
-        "Current GPA: 7.54/10.",
-        "Currently in my fourth year of studies.",
+        "I've been studying here since 2023.",
+        "My GPA is 7.54/10, and I'm in my fourth year.",
       ],
       es: [
-        "Promedio actual: 7.54/10.",
-        "Actualmente en cuarto año.",
+        "Estudio acá desde 2023.",
+        "Mi promedio es 7,54/10 y estoy en cuarto año.",
       ],
       pt: [
-        "Média atual: 7.54/10.",
-        "Atualmente no quarto ano.",
+        "Estudo aqui desde 2023.",
+        "Minha média é 7,54/10 e estou no quarto ano.",
       ],
     },
   },
@@ -42,16 +42,16 @@ const EXPERIENCE = [
     image: "assets/images/education/glasgow.webp",
     bullets: {
       en: [
-        "Graduated with honors: top 3 of the class.",
-        "Final GPA: 9.03/10.",
+        "I graduated with honors, in the top 3 of my class.",
+        "My final GPA was 9.03/10.",
       ],
       es: [
-        "Egresado con honores: top 3 de la clase.",
-        "Promedio final: 9.03/10.",
+        "Me egresé con honores, entre los tres mejores promedios de mi clase.",
+        "Mi promedio final fue 9,03/10.",
       ],
       pt: [
-        "Formado com honras: top 3 da turma.",
-        "Média final: 9.03/10.",
+        "Me formei com honras, entre os três melhores da minha turma.",
+        "Minha média final foi 9,03/10.",
       ],
     },
   },
@@ -65,9 +65,9 @@ const EXPERIENCE = [
     end: "2022",
     image: "assets/images/education/cambridge.webp",
     bullets: {
-      en: ["Passed with merit."],
-      es: ["Aprobado con mérito."],
-      pt: ["Aprovado com mérito."],
+      en: ["I hold this Cambridge IGCSE; I passed with merit."],
+      es: ["Tengo este IGCSE de Cambridge; lo aprobé con mérito."],
+      pt: ["Tenho este IGCSE de Cambridge; fui aprovado com mérito."],
     },
   },
   {
@@ -80,18 +80,18 @@ const EXPERIENCE = [
     end: "",
     image: "assets/images/education/cambridge.webp",
     bullets: {
-      en: ["C1 Level: Advanced.", "Score: 185/190."],
-      es: ["Nivel C1: Advanced.", "Puntaje: 185/190."],
-      pt: ["Nível C1: Advanced.", "Pontuação: 185/190."],
+      en: ["I hold a Cambridge First Certificate in English (C1).", "My score was 185/190."],
+      es: ["Tengo el First Certificate in English de Cambridge (C1).", "Mi puntaje fue 185/190."],
+      pt: ["Tenho o First Certificate in English de Cambridge (C1).", "Minha pontuação foi 185/190."],
     },
   },
   {
     id: "work-1",
     type: "work",
     title: {
-      en: "Programming Paradigms' Teaching Assistant",
-      es: "Ayudante ad honorem — Paradigmas de Programación",
-      pt: "Monitor voluntário ad honorem — Paradigmas de Programação",
+      en: "Teaching Assistant — Programming Paradigms",
+      es: "Ayudante de cátedra — Paradigmas de Programación",
+      pt: "Monitor — Paradigmas de Programação",
     },
     org: "UTN FRBA",
     location: "Buenos Aires, Argentina",
@@ -99,16 +99,19 @@ const EXPERIENCE = [
     end: "Present",
     bullets: {
       en: [
-        "Collaborated in the design, preparation, and delivery of course materials, prog. assignments, and exams.",
-        "Mentored students in understanding and applying core programming concepts through practical exercises, fostering critical thinking and problem-solving skills.",
+        "I am a teaching assistant for Programming Paradigms at UTN FRBA.",
+        "I help design course materials, assignments, and exams.",
+        "I mentor students on core programming concepts through practical exercises.",
       ],
       es: [
-        "Colaboré en el diseño, preparación y presentación de material didáctico, trabajos prácticos y evaluaciones.",
-        "Guié a estudiantes en la comprensión y aplicación de los conceptos fundamentales de programación mediante ejercicios prácticos, promoviendo el pensamiento crítico y la resolución de problemas.",
+        "Soy ayudante de cátedra en Paradigmas de Programación en la UTN FRBA.",
+        "Ayudo a armar el material, los trabajos prácticos y las evaluaciones.",
+        "Acompaño a estudiantes con los conceptos de programación en ejercicios prácticos.",
       ],
       pt: [
-        "Colaborei no planejamento e desenvolvimento de materiais didáticos, exercícios e avaliações da disciplina.",
-        "Orientei estudantes na compreensão e aplicação dos principais conceitos de programação por meio de exercícios práticos, incentivando o pensamento crítico e o desenvolvimento de habilidades de resolução de problemas.",
+        "Sou monitor de Paradigmas de Programação na UTN FRBA.",
+        "Ajudo a montar o material, os exercícios e as avaliações.",
+        "Acompanho estudantes nos conceitos de programação com exercícios práticos.",
       ],
     },
   },
@@ -126,16 +129,16 @@ const EXPERIENCE = [
     end: "2023",
     bullets: {
       en: [
-        "Designed and developed the company's first relational databases, applying normalization principles and industry best practices, significantly reducing the time required for employees to register and process sales.",
-        "Worked extensively with spreadsheets, Power BI, databases, and Python to support data analysis, reporting, and business intelligence initiatives.",
+        "I designed and built the company's first relational databases with normalization, which cut down the time staff spent registering and processing sales.",
+        "I worked with spreadsheets, Power BI, databases, and Python for reporting and analysis.",
       ],
       es: [
-        "Diseñé e implementé la primera base de datos de la empresa aplicando principios de normalización, optimizando el proceso de registro y gestión de ventas.",
-        "Desarrollé soluciones de análisis de datos usando Power BI y Python para generar reportes e indicadores.",
+        "Diseñé e implementé la primera base de datos relacional de la empresa con normalización, y el registro y la gestión de ventas tardaron menos.",
+        "Trabajé con planillas, Power BI, bases de datos y Python para reportes y análisis.",
       ],
       pt: [
-        "Projetei e implementei o primeiro banco de dados da empresa, aplicando princípios de normalização para otimizar os processos de registro e gestão de vendas.",
-        "Desenvolvi soluções de análise de dados utilizando Power BI e Python para gerar relatórios e indicadores.",
+        "Projetei e implementei o primeiro banco relacional da empresa com normalização, e o registro e a gestão de vendas ficaram mais rápidos.",
+        "Trabalhei com planilhas, Power BI, bancos de dados e Python para relatórios e análise.",
       ],
     },
   },

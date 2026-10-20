@@ -157,8 +157,103 @@
   border-bottom: 1px solid var(--border);
 }
 
-.stack-block + .stack-block {
-  margin-top: 1.5rem;
+.tech-panel {
+  margin-top: 2.75rem;
+}
+
+.tech-lead {
+  margin-top: 0.45rem;
+  max-width: 38rem;
+  font-size: 1.05rem;
+}
+
+.tech-groups {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.tech-group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.tech-group-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  color: var(--accent);
+}
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.72rem 0.4rem 0.55rem;
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.tech-mark {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+  background-color: var(--mark, var(--text));
+  -webkit-mask: var(--glyph) center / contain no-repeat;
+  mask: var(--glyph) center / contain no-repeat;
+}
+
+.mark-java { --mark: #ed8b00; --glyph: url("../assets/icons/tech/java.svg"); }
+.mark-javascript { --mark: #f7df1e; --glyph: url("../assets/icons/tech/javascript.svg"); }
+.mark-python { --mark: #3776ab; --glyph: url("../assets/icons/tech/python.svg"); }
+.mark-go { --mark: #00add8; --glyph: url("../assets/icons/tech/go.svg"); }
+.mark-c { --mark: #a8b9cc; --glyph: url("../assets/icons/tech/c.svg"); }
+.mark-scala { --mark: #dc322f; --glyph: url("../assets/icons/tech/scala.svg"); }
+.mark-ruby { --mark: #cc342d; --glyph: url("../assets/icons/tech/ruby.svg"); }
+.mark-haskell { --mark: #8f4e8b; --glyph: url("../assets/icons/tech/haskell.svg"); }
+.mark-git { --mark: #f03c2e; --glyph: url("../assets/icons/tech/git.svg"); }
+.mark-docker { --mark: #2496ed; --glyph: url("../assets/icons/tech/docker.svg"); }
+.mark-react { --mark: #61dafb; --glyph: url("../assets/icons/tech/react.svg"); }
+.mark-nodejs { --mark: #5fa04e; --glyph: url("../assets/icons/tech/nodejs.svg"); }
+.mark-spring { --mark: #6db33f; --glyph: url("../assets/icons/tech/springboot.svg"); }
+.mark-maven { --mark: #c71a36; --glyph: url("../assets/icons/tech/maven.svg"); }
+.mark-nginx { --mark: #009639; --glyph: url("../assets/icons/tech/nginx.svg"); }
+.mark-aws { --mark: #ff9900; --glyph: url("../assets/icons/tech/aws.svg"); }
+.mark-powerbi { --mark: #f2c811; --glyph: url("../assets/icons/tech/powerbi.svg"); }
+.mark-mysql { --mark: #4479a1; --glyph: url("../assets/icons/tech/mysql.svg"); }
+.mark-sqlserver { --mark: #e34c26; --glyph: url("../assets/icons/tech/sqlserver.svg"); }
+.mark-mongodb { --mark: #47a248; --glyph: url("../assets/icons/tech/mongodb.svg"); }
+.mark-sql { --mark: #4b9bff; --glyph: url("../assets/icons/tech/sql.svg"); }
+
+@media (min-width: 768px) {
+  .tech-groups {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 1.85rem;
+    align-items: start;
+  }
+
+  .tech-group-databases {
+    grid-column: 1 / -1;
+  }
 }
 
 .bio {
