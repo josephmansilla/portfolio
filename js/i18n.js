@@ -435,10 +435,16 @@ function syncHeadMeta() {
 function applyI18n(root) {
   var scope = root || document;
   scope.querySelectorAll("[data-i18n]").forEach(function (el) {
-    el.textContent = t(el.getAttribute("data-i18n"));
+    var key = el.getAttribute("data-i18n");
+    if (!key) return;
+    var text = t(key);
+    if (text !== key) el.textContent = text;
   });
   scope.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
-    el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
+    var key = el.getAttribute("data-i18n-aria");
+    if (!key) return;
+    var text = t(key);
+    if (text !== key) el.setAttribute("aria-label", text);
   });
   if (!root && document.body) {
     var titleKey = document.body.getAttribute("data-i18n-title");
