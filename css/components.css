@@ -311,7 +311,7 @@
   border-radius: 999px;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
-  min-height: 2.4rem;
+  min-height: 2.75rem;
   transition: transform 100ms ease-out;
 }
 
@@ -328,7 +328,7 @@
 .project-grid {
   display: grid;
   gap: 1rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .project-card {
@@ -342,7 +342,42 @@
   box-shadow: var(--shadow);
   color: inherit;
   text-decoration: none;
-  height: auto;
+  height: 100%;
+  min-width: 0;
+}
+
+.project-card .chip-list {
+  margin-top: auto;
+}
+
+.chip-more {
+  position: relative;
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.chip-more-panel {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  bottom: calc(100% + 0.4rem);
+  width: max-content;
+  max-width: 14rem;
+  margin: 0;
+  padding: 0.45rem 0.7rem;
+  list-style: none;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.chip-more.is-open .chip-more-panel {
+  display: block;
 }
 
 .card-media,
@@ -366,13 +401,15 @@
   font-size: 0.92rem;
 }
 
-.try-link {
+.try-link,
+.source-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.try-link .icon-mask {
+.try-link .icon-mask,
+.source-link .icon-mask {
   width: 1.15rem;
   height: 1.15rem;
 }
@@ -547,9 +584,15 @@
   max-width: 40rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 22rem));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -563,7 +606,7 @@
   }
 
   .icon-btn:hover,
-  .filter-btn:hover,
+  .filter-btn:hover:not([aria-pressed="true"]),
   .footer-social a:hover,
   .lang-list button:hover {
     background: var(--bg-muted);
@@ -572,5 +615,9 @@
   .project-card:hover,
   .article-card:hover {
     border-color: var(--accent);
+  }
+
+  .chip-more:hover .chip-more-panel {
+    display: block;
   }
 }
