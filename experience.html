@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -9,8 +9,20 @@
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#161616" />
     <link rel="icon" href="assets/images/jtm.ico" type="image/x-icon" />
-    <meta name="description" content="Education and work experience of Joseph Thomas Mansilla." />
-    <title>JTM | Experience</title>
+    <link rel="canonical" href="https://josephmansilla.github.io/experience.html" />
+    <meta name="description" content="Joseph Thomas Mansilla estudia Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires. Glasgow College, Cambridge y ayudante de Paradigmas de Programación." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Joseph Thomas Mansilla" />
+    <meta property="og:title" content="Experiencia — Joseph Thomas Mansilla" />
+    <meta property="og:description" content="Joseph Thomas Mansilla estudia Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires. Glasgow College, Cambridge y ayudante de Paradigmas de Programación." />
+    <meta property="og:url" content="https://josephmansilla.github.io/experience.html" />
+    <meta property="og:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Experiencia — Joseph Thomas Mansilla" />
+    <meta name="twitter:description" content="Joseph Thomas Mansilla estudia Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires. Glasgow College, Cambridge y ayudante de Paradigmas de Programación." />
+    <meta name="twitter:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <title>Experiencia — Joseph Thomas Mansilla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,31 +33,34 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="experience" data-i18n-title="meta.experience">
+  <body data-page="experience" data-i18n-title="meta.experience" data-i18n-desc="meta.experienceDesc">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
     <div id="site-header"></div>
 
     <main id="main" class="site-main">
       <section class="section">
         <div class="section-head reveal">
-          <p class="kicker" data-i18n="experience.kicker">Path</p>
-          <h1 data-i18n="experience.title">Experience</h1>
+          <p class="kicker" data-i18n="experience.kicker">Recorrido</p>
+          <h1 data-i18n="experience.title">Experiencia</h1>
+          <p class="muted" data-i18n="experience.intro">
+            Joseph Thomas Mansilla estudia Ingeniería en Sistemas de Información en la UTN FRBA, en Buenos Aires, desde 2023. Egresó del Glasgow College y tiene certificados de Cambridge. Es ayudante de Paradigmas de Programación en la UTN FRBA.
+          </p>
         </div>
 
         <div class="experience-layout reveal">
           <div class="experience-side">
             <section class="experience-block" data-experience-block>
-              <h2 data-i18n="experience.education">Education</h2>
+              <h2 data-i18n="experience.education">Educación</h2>
               <ol class="timeline" data-experience-list="education"></ol>
             </section>
             <section class="experience-block" data-experience-block hidden>
-              <h2 data-i18n="experience.courses">Courses</h2>
+              <h2 data-i18n="experience.courses">Cursos</h2>
               <ol class="timeline" data-experience-list="course"></ol>
             </section>
           </div>
           <section class="experience-block" data-experience-block>
-            <h2 data-i18n="experience.work">Work</h2>
+            <h2 data-i18n="experience.work">Trabajo</h2>
             <ol class="timeline" data-experience-list="work"></ol>
           </section>
         </div>
@@ -55,8 +70,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/i18n.js"></script>
-    <script src="js/shell.js"></script>
+    <script src="js/shell.js?v=3"></script>
     <script src="js/main.js"></script>
     <script src="js/experience.js"></script>
   </body>

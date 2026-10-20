@@ -300,6 +300,17 @@ body[data-page="home"] .logo {
   transform: scale(0.97);
 }
 
+.footer-made {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.footer-heart {
+  color: var(--danger);
+}
+
 .footer-links {
   display: flex;
   gap: 1rem;

@@ -13,6 +13,23 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
+  function ensureFooterCredit() {
+    var inner = document.querySelector(".footer-inner");
+    if (!inner || inner.querySelector(".footer-made")) return;
+    var made = document.createElement("p");
+    made.className = "footer-made";
+    made.setAttribute("data-i18n", "footer.made");
+    made.innerHTML =
+      '<span data-i18n="footer.made">' +
+      (typeof t === "function" ? t("footer.made") : "Made with") +
+      '</span> <span class="footer-heart" aria-hidden="true">❤️</span>';
+    var copy = inner.querySelector("p:last-of-type");
+    if (copy) inner.insertBefore(made, copy);
+    else inner.appendChild(made);
+  }
+
+  ensureFooterCredit();
+
   function closeNav() {
     if (!nav || !toggle) return;
     nav.classList.remove("is-open");

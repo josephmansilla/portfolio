@@ -9,13 +9,20 @@
 var I18N = {
   en: {
     meta: {
-      home: "JTM | Dev Portfolio",
-      about: "JTM | About Me",
-      experience: "JTM | Experience",
-      projects: "JTM | Projects",
-      articles: "JTM | Articles",
-      contact: "JTM | Contact",
-      game: "JTM | Breakout",
+      home: "Joseph Thomas Mansilla | Systems Engineering | UTN FRBA, Buenos Aires",
+      homeDesc: "Joseph Thomas Mansilla, Information Systems Engineering student at UTN FRBA in Buenos Aires, Argentina.",
+      about: "About — Joseph Thomas Mansilla",
+      aboutDesc: "About Joseph Thomas Mansilla, Information Systems Engineering student at UTN FRBA in Buenos Aires.",
+      experience: "Experience — Joseph Thomas Mansilla",
+      experienceDesc: "Joseph Thomas Mansilla studies Information Systems Engineering at UTN FRBA in Buenos Aires. Glasgow College, Cambridge, and teaching assistant for Programming Paradigms.",
+      projects: "Projects — Joseph Thomas Mansilla",
+      projectsDesc: "Projects by Joseph Thomas Mansilla, Information Systems Engineering student at UTN FRBA in Buenos Aires.",
+      articles: "Articles — Joseph Thomas Mansilla",
+      articlesDesc: "Articles by Joseph Thomas Mansilla, Information Systems Engineering student at UTN FRBA in Buenos Aires.",
+      contact: "Contact — Joseph Thomas Mansilla",
+      contactDesc: "Contact Joseph Thomas Mansilla, Information Systems Engineering student at UTN FRBA in Buenos Aires.",
+      game: "Breakout — Joseph Thomas Mansilla",
+      gameDesc: "Breakout, a mini-game on the portfolio of Joseph Thomas Mansilla, systems engineering student in Buenos Aires.",
     },
     nav: {
       home: "Home",
@@ -57,6 +64,7 @@ var I18N = {
     experience: {
       kicker: "Path",
       title: "Experience",
+      intro: "Joseph Thomas Mansilla studies Information Systems Engineering at UTN FRBA in Buenos Aires, since 2023. He graduated from Glasgow College and holds Cambridge certificates. He is a teaching assistant for Programming Paradigms at UTN FRBA.",
       education: "Education",
       courses: "Courses",
       work: "Work",
@@ -101,6 +109,9 @@ var I18N = {
       thanks: "Thanks. Your message was sent.",
       fail: "Something went wrong. Please email me directly.",
     },
+    footer: {
+      made: "Made with",
+    },
     game: {
       kicker: "Play",
       intro: "Destroy every brick with the ball. Keep it alive with the paddle.",
@@ -116,13 +127,20 @@ var I18N = {
   },
   es: {
     meta: {
-      home: "JTM | Portafolio",
-      about: "JTM | Sobre mí",
-      experience: "JTM | Experiencia",
-      projects: "JTM | Proyectos",
-      articles: "JTM | Artículos",
-      contact: "JTM | Contacto",
-      game: "JTM | Breakout",
+      home: "Joseph Thomas Mansilla | Ingeniería en Sistemas | UTN FRBA, Buenos Aires",
+      homeDesc: "Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires, Argentina.",
+      about: "Sobre mí — Joseph Thomas Mansilla",
+      aboutDesc: "Sobre Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires.",
+      experience: "Experiencia — Joseph Thomas Mansilla",
+      experienceDesc: "Joseph Thomas Mansilla estudia Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires. Glasgow College, Cambridge y ayudante de Paradigmas de Programación.",
+      projects: "Proyectos — Joseph Thomas Mansilla",
+      projectsDesc: "Proyectos de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires.",
+      articles: "Artículos — Joseph Thomas Mansilla",
+      articlesDesc: "Artículos de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires.",
+      contact: "Contacto — Joseph Thomas Mansilla",
+      contactDesc: "Contacto de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires.",
+      game: "Breakout — Joseph Thomas Mansilla",
+      gameDesc: "Breakout, un minijuego del portafolio de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas en Buenos Aires.",
     },
     nav: {
       home: "Inicio",
@@ -164,6 +182,7 @@ var I18N = {
     experience: {
       kicker: "Recorrido",
       title: "Experiencia",
+      intro: "Joseph Thomas Mansilla estudia Ingeniería en Sistemas de Información en la UTN FRBA, en Buenos Aires, desde 2023. Egresó del Glasgow College y tiene certificados de Cambridge. Es ayudante de Paradigmas de Programación en la UTN FRBA.",
       education: "Educación",
       courses: "Cursos",
       work: "Trabajo",
@@ -208,6 +227,9 @@ var I18N = {
       thanks: "Gracias. Tu mensaje fue enviado.",
       fail: "Algo salió mal. Escribime por email.",
     },
+    footer: {
+      made: "Hecho con",
+    },
     game: {
       kicker: "Jugar",
       intro: "Destruí todos los ladrillos con la pelota. Mantenela en juego con la paleta.",
@@ -223,13 +245,20 @@ var I18N = {
   },
   pt: {
     meta: {
-      home: "JTM | Portfólio",
-      about: "JTM | Sobre mim",
-      experience: "JTM | Experiência",
-      projects: "JTM | Projetos",
-      articles: "JTM | Artigos",
-      contact: "JTM | Contato",
-      game: "JTM | Breakout",
+      home: "Joseph Thomas Mansilla | Engenharia de Sistemas | UTN FRBA, Buenos Aires",
+      homeDesc: "Joseph Thomas Mansilla, estudante de Engenharia de Sistemas de Informação na UTN FRBA, em Buenos Aires, Argentina.",
+      about: "Sobre mim — Joseph Thomas Mansilla",
+      aboutDesc: "Sobre Joseph Thomas Mansilla, estudante de Engenharia de Sistemas de Informação na UTN FRBA, em Buenos Aires.",
+      experience: "Experiência — Joseph Thomas Mansilla",
+      experienceDesc: "Joseph Thomas Mansilla estuda Engenharia de Sistemas de Informação na UTN FRBA, em Buenos Aires. Glasgow College, Cambridge e monitor de Paradigmas de Programação.",
+      projects: "Projetos — Joseph Thomas Mansilla",
+      projectsDesc: "Projetos de Joseph Thomas Mansilla, estudante de Engenharia de Sistemas de Informação na UTN FRBA, em Buenos Aires.",
+      articles: "Artigos — Joseph Thomas Mansilla",
+      articlesDesc: "Artigos de Joseph Thomas Mansilla, estudante de Engenharia de Sistemas de Informação na UTN FRBA, em Buenos Aires.",
+      contact: "Contato — Joseph Thomas Mansilla",
+      contactDesc: "Contato de Joseph Thomas Mansilla, estudante de Engenharia de Sistemas de Informação na UTN FRBA, em Buenos Aires.",
+      game: "Breakout — Joseph Thomas Mansilla",
+      gameDesc: "Breakout, um minijogo do portfólio de Joseph Thomas Mansilla, estudante de Engenharia de Sistemas em Buenos Aires.",
     },
     nav: {
       home: "Início",
@@ -271,6 +300,7 @@ var I18N = {
     experience: {
       kicker: "Trajetória",
       title: "Experiência",
+      intro: "Joseph Thomas Mansilla estuda Engenharia de Sistemas de Informação na UTN FRBA, em Buenos Aires, desde 2023. Formou-se no Glasgow College e tem certificados de Cambridge. É monitor de Paradigmas de Programação na UTN FRBA.",
       education: "Educação",
       courses: "Cursos",
       work: "Trabalho",
@@ -315,6 +345,9 @@ var I18N = {
       thanks: "Obrigado. Sua mensagem foi enviada.",
       fail: "Algo deu errado. Escreva para mim por email.",
     },
+    footer: {
+      made: "Feito com",
+    },
     game: {
       kicker: "Jogar",
       intro: "Destrua todos os tijolos com a bola. Mantenha-a em jogo com a raquete.",
@@ -332,7 +365,7 @@ var I18N = {
 
 function currentLang() {
   var lang = document.documentElement.lang;
-  if (lang !== "en" && lang !== "es" && lang !== "pt") return "en";
+  if (lang !== "en" && lang !== "es" && lang !== "pt") return "es";
   return lang;
 }
 
@@ -376,6 +409,26 @@ function L(value) {
   return value;
 }
 
+var OG_LOCALES = { es: "es_AR", en: "en_US", pt: "pt_BR" };
+
+function setMeta(selector, content) {
+  if (!content) return;
+  var el = document.querySelector(selector);
+  if (el) el.setAttribute("content", content);
+}
+
+function syncHeadMeta() {
+  if (!document.body) return;
+  var descKey = document.body.getAttribute("data-i18n-desc");
+  var desc = descKey ? t(descKey) : "";
+  setMeta('meta[name="description"]', desc);
+  setMeta('meta[property="og:title"]', document.title);
+  setMeta('meta[name="twitter:title"]', document.title);
+  setMeta('meta[property="og:description"]', desc);
+  setMeta('meta[name="twitter:description"]', desc);
+  setMeta('meta[property="og:locale"]', OG_LOCALES[currentLang()] || "es_AR");
+}
+
 function applyI18n(root) {
   var scope = root || document;
   scope.querySelectorAll("[data-i18n]").forEach(function (el) {
@@ -387,6 +440,7 @@ function applyI18n(root) {
   if (!root && document.body) {
     var titleKey = document.body.getAttribute("data-i18n-title");
     if (titleKey) document.title = t(titleKey);
+    syncHeadMeta();
   }
 }
 

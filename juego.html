@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -9,8 +9,21 @@
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#161616" />
     <link rel="icon" href="assets/images/jtm.ico" type="image/x-icon" />
-    <meta name="description" content="Breakout mini-game from Joseph Thomas Mansilla's portfolio." />
-    <title>JTM | Breakout</title>
+    <link rel="canonical" href="https://josephmansilla.github.io/juego.html" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Breakout, un minijuego del portafolio de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas en Buenos Aires." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Joseph Thomas Mansilla" />
+    <meta property="og:title" content="Breakout — Joseph Thomas Mansilla" />
+    <meta property="og:description" content="Breakout, un minijuego del portafolio de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas en Buenos Aires." />
+    <meta property="og:url" content="https://josephmansilla.github.io/juego.html" />
+    <meta property="og:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Breakout — Joseph Thomas Mansilla" />
+    <meta name="twitter:description" content="Breakout, un minijuego del portafolio de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas en Buenos Aires." />
+    <meta name="twitter:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <title>Breakout — Joseph Thomas Mansilla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,25 +34,25 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="game" data-i18n-title="meta.game">
-    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+  <body data-page="game" data-i18n-title="meta.game" data-i18n-desc="meta.gameDesc">
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
     <div id="site-header"></div>
 
     <main id="main" class="site-main">
       <section class="section">
         <div class="section-head reveal">
-          <p class="kicker" data-i18n="game.kicker">Play</p>
+          <p class="kicker" data-i18n="game.kicker">Jugar</p>
           <h1 class="display">Breakout</h1>
           <p class="muted" data-i18n="game.intro">
-            Destroy every brick with the ball. Keep it alive with the paddle.
+            Destruí todos los ladrillos con la pelota. Mantenela en juego con la paleta.
           </p>
         </div>
 
         <div class="game-wrap reveal">
           <div class="game-hud">
-            <p class="game-stat"><span data-i18n="game.score">Score</span>: <span data-score>0</span></p>
-            <p class="game-stat"><span data-i18n="game.lives">Lives</span>: <span data-lives>3</span></p>
-            <button class="btn" type="button" data-restart data-i18n="game.restart">Restart</button>
+            <p class="game-stat"><span data-i18n="game.score">Puntaje</span>: <span data-score>0</span></p>
+            <p class="game-stat"><span data-i18n="game.lives">Vidas</span>: <span data-lives>3</span></p>
+            <button class="btn" type="button" data-restart data-i18n="game.restart">Reiniciar</button>
           </div>
           <canvas
             class="game-canvas"
@@ -47,19 +60,19 @@
             width="800"
             height="600"
             data-i18n-aria="game.canvas"
-            aria-label="Breakout game canvas. Move the paddle with the arrow keys, A and D, the mouse, or touch."
+            aria-label="Juego Breakout. Mové la paleta con las flechas, A y D, el mouse o el tacto."
           ></canvas>
           <p class="game-hint" data-i18n="game.hint">
-            Keyboard: Left/Right arrows or A/D. Mouse and touch: drag across the
-            canvas. The game pauses when this tab is hidden.
+            Teclado: flechas izquierda/derecha o A/D. Mouse y tacto: arrastrá sobre el tablero. El juego se pausa cuando esta pestaña está oculta.
           </p>
         </div>
       </section>
     </main>
     <div id="site-footer"></div>
 
+    <script src="js/analytics.js"></script>
     <script src="js/i18n.js"></script>
-    <script src="js/shell.js"></script>
+    <script src="js/shell.js?v=3"></script>
     <script src="js/main.js"></script>
     <script src="js/game.js"></script>
   </body>

@@ -93,7 +93,7 @@ const EXPERIENCE = [
       es: "Ayudante ad honorem — Paradigmas de Programación",
       pt: "Monitor voluntário ad honorem — Paradigmas de Programação",
     },
-    org: "UTN FBRA",
+    org: "UTN FRBA",
     location: "Buenos Aires, Argentina",
     start: "2025",
     end: "Present",

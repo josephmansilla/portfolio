@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -9,11 +9,29 @@
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#161616" />
     <link rel="icon" href="assets/images/jtm.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://josephmansilla.github.io/" />
     <meta
       name="description"
-      content="Portfolio of Joseph Thomas Mansilla, Systems Engineering student in Buenos Aires."
+      content="Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires, Argentina."
     />
-    <title>JTM | Dev Portfolio</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Joseph Thomas Mansilla" />
+    <meta property="og:title" content="Joseph Thomas Mansilla | Ingeniería en Sistemas | UTN FRBA, Buenos Aires" />
+    <meta
+      property="og:description"
+      content="Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires, Argentina."
+    />
+    <meta property="og:url" content="https://josephmansilla.github.io/" />
+    <meta property="og:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Joseph Thomas Mansilla | Ingeniería en Sistemas | UTN FRBA, Buenos Aires" />
+    <meta
+      name="twitter:description"
+      content="Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires, Argentina."
+    />
+    <meta name="twitter:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <title>Joseph Thomas Mansilla | Ingeniería en Sistemas | UTN FRBA, Buenos Aires</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,9 +42,9 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="home" data-i18n-title="meta.home">
+  <body data-page="home" data-i18n-title="meta.home" data-i18n-desc="meta.homeDesc">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
 
     <div id="site-header"></div>
 
@@ -38,21 +56,21 @@
             <span data-i18n="home.place">Buenos Aires, Argentina</span>
           </p>
           <h1>Joseph Thomas Mansilla</h1>
-          <p class="lede" data-i18n="home.lede">Systems Engineering Student</p>
+          <p class="lede" data-i18n="home.lede">Estudiante de Ingeniería en Sistemas</p>
           <p class="bio" data-i18n="home.bio">
-            Learning to become better.
+            Aprendiendo a ser mejor.
           </p>
           <div class="hero-social" data-social="email github linkedin youtube twitter"></div>
           <div class="hero-actions">
-            <a class="btn" href="projects.html" data-i18n="home.projects">Projects</a>
-            <a class="btn btn-ghost" href="contact.html" data-i18n="home.contact">Contact</a>
+            <a class="btn" href="projects.html" data-i18n="home.projects">Proyectos</a>
+            <a class="btn btn-ghost" href="contact.html" data-i18n="home.contact">Contacto</a>
             <a
               class="btn btn-ghost"
               data-resume
               download
-              href="assets/cv/resume-Joseph-Mansilla-en.pdf"
+              href="assets/cv/cv-Joseph-Mansilla-es.pdf"
               data-i18n-aria="home.resume"
-              aria-label="Download resume"
+              aria-label="Descargar CV"
             >
               <span class="icon-mask icon-resume" aria-hidden="true"></span>
             </a>
@@ -65,8 +83,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/i18n.js"></script>
-    <script src="js/shell.js"></script>
+    <script src="js/shell.js?v=3"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

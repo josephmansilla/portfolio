@@ -146,6 +146,7 @@ var RESUME_FILES = {
       '">' +
       social +
       "</nav>" +
+      '<p class="footer-made"><span data-i18n="footer.made">Made with</span> <span class="footer-heart" aria-hidden="true">❤️</span></p>' +
       "<p>© <span data-year></span> Joseph Thomas Mansilla</p>" +
       "</div></footer>";
   }
@@ -202,13 +203,13 @@ var RESUME_FILES = {
   var langToggle = document.querySelector(".lang-toggle");
   var langList = document.getElementById("lang-list");
   if (langToggle && langList) {
-    var saved = "en";
+    var saved = "es";
     try {
-      saved = localStorage.getItem("lang") || "en";
+      saved = localStorage.getItem("lang") || "es";
     } catch (e) {
-      saved = "en";
+      saved = "es";
     }
-    if (saved !== "en" && saved !== "es" && saved !== "pt") saved = "en";
+    if (saved !== "en" && saved !== "es" && saved !== "pt") saved = "es";
     document.documentElement.lang = saved;
 
     function markLang(code) {
@@ -266,4 +267,54 @@ var RESUME_FILES = {
   }
 
   if (typeof applyI18n === "function") applyI18n();
+
+  if (!document.getElementById("person-jsonld")) {
+    var person = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://josephmansilla.github.io/#person",
+      name: "Joseph Thomas Mansilla",
+      alternateName: "Joseph Mansilla",
+      jobTitle: "Estudiante de Ingeniería en Sistemas de Información",
+      url: "https://josephmansilla.github.io/",
+      image: "https://josephmansilla.github.io/assets/images/headshot.webp",
+      homeLocation: {
+        "@type": "Place",
+        name: "Buenos Aires, Argentina",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Buenos Aires",
+          addressCountry: "AR",
+        },
+      },
+      alumniOf: [
+        {
+          "@type": "CollegeOrUniversity",
+          name: "UTN FRBA",
+          url: "https://www.frba.utn.edu.ar/",
+        },
+        {
+          "@type": "EducationalOrganization",
+          name: "Glasgow College",
+        },
+      ],
+      affiliation: {
+        "@type": "CollegeOrUniversity",
+        name: "UTN FRBA",
+        url: "https://www.frba.utn.edu.ar/",
+      },
+      sameAs: [
+        SITE_LINKS.github,
+        SITE_LINKS.linkedin,
+        SITE_LINKS.substack,
+        SITE_LINKS.youtube,
+        SITE_LINKS.twitter,
+      ],
+    };
+    var personScript = document.createElement("script");
+    personScript.id = "person-jsonld";
+    personScript.type = "application/ld+json";
+    personScript.textContent = JSON.stringify(person);
+    document.head.appendChild(personScript);
+  }
 })();

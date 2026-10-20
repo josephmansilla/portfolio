@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -9,8 +9,20 @@
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#161616" />
     <link rel="icon" href="assets/images/jtm.ico" type="image/x-icon" />
-    <meta name="description" content="Writing by Joseph Thomas Mansilla." />
-    <title>JTM | Articles</title>
+    <link rel="canonical" href="https://josephmansilla.github.io/articles.html" />
+    <meta name="description" content="Artículos de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Joseph Thomas Mansilla" />
+    <meta property="og:title" content="Artículos — Joseph Thomas Mansilla" />
+    <meta property="og:description" content="Artículos de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta property="og:url" content="https://josephmansilla.github.io/articles.html" />
+    <meta property="og:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Artículos — Joseph Thomas Mansilla" />
+    <meta name="twitter:description" content="Artículos de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta name="twitter:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <title>Artículos — Joseph Thomas Mansilla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,16 +33,16 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="articles" data-i18n-title="meta.articles">
+  <body data-page="articles" data-i18n-title="meta.articles" data-i18n-desc="meta.articlesDesc">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
     <div id="site-header"></div>
 
     <main id="main" class="site-main">
       <section class="section">
         <div class="section-head reveal">
-          <p class="kicker" data-i18n="articles.kicker">Writing</p>
-          <h1 data-i18n="articles.title">Articles</h1>
+          <p class="kicker" data-i18n="articles.kicker">Escritos</p>
+          <h1 data-i18n="articles.title">Artículos</h1>
         </div>
         <div class="article-list reveal" data-article-list></div>
       </section>
@@ -39,8 +51,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/i18n.js"></script>
-    <script src="js/shell.js"></script>
+    <script src="js/shell.js?v=3"></script>
     <script src="js/main.js"></script>
     <script src="js/articles.js"></script>
   </body>

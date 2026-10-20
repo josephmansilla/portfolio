@@ -1,4 +1,3 @@
-
 const PROJECTS = [
   {
     id: "p1",
@@ -124,11 +123,11 @@ const PROJECTS = [
       { name: "MySQL" },
       { name: "Docker", filter: true },
       { name: "AWS" },
-      { name: "Docker Compose", card: false },
       { name: "SQL", filter: true, card: false },
       { name: "JavaScript", filter: true, card: false },
       { name: "Hibernate", card: true },
       { name: "Maven"},
+      { name: "Docker Compose" },
       { name: "CSS", card: false },
       { name: "HTML", card: false },
       { name: "Git", card: false },
@@ -184,12 +183,12 @@ const PROJECTS = [
       { name: "JWT", card: false },
       { name: "Mongoose", card: false },
       { name: "Oracle Cloud" },
+      { name: "Nginx"},
       { name: "Docker", filter: true },
       { name: "Swagger", card: false },
-      { name: "Nginx"},
       { name: "DuckDns", card: false },
       { name: "Docker Compose", card: false },
-      { name: "Portainer", card: false },
+      { name: "Portainer" },
       { name: "Git", card: false },
     ],
     github: "https://github.com/josephmansilla/tp-sweet-medical-dds-1c-2026",
@@ -382,7 +381,7 @@ function youtubeId(url) {
 var FILTER_ORDER = ["Go", "Java", "JavaScript", "Scala", "Ruby", "C", "SQL", "React", "SpringBoot", "Docker"];
 var STACK_ORDER = ["Java", "JavaScript", "SQL", "Go", "Scala", "Ruby", "C", "Haskell", "Python"];
 var STACK_ALWAYS = { Haskell: true, Python: true };
-var CARD_CHIP_LIMIT = 6;
+var CARD_CHIP_LIMIT = 6;  
 
 function techName(tech) {
   return typeof tech === "string" ? tech : tech.name;
@@ -600,6 +599,7 @@ function renderProjectDetail() {
 
   if (!project) {
     document.title = t("projects.notFound") + " — Joseph Thomas Mansilla";
+    if (typeof syncHeadMeta === "function") syncHeadMeta();
     root.innerHTML =
       "<h1>" +
       escapeHtml(t("projects.notFound")) +
@@ -613,6 +613,7 @@ function renderProjectDetail() {
 
   var title = L(project.title);
   document.title = title + " — Joseph Thomas Mansilla";
+  if (typeof syncHeadMeta === "function") syncHeadMeta();
 
   const paragraphs = (L(project.details) || [])
     .map(function (paragraph) {

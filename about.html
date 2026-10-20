@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -9,8 +9,20 @@
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#161616" />
     <link rel="icon" href="assets/images/jtm.ico" type="image/x-icon" />
-    <meta name="description" content="About Joseph Thomas Mansilla, Systems Engineering student." />
-    <title>JTM | About Me</title>
+    <link rel="canonical" href="https://josephmansilla.github.io/about.html" />
+    <meta name="description" content="Sobre Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Joseph Thomas Mansilla" />
+    <meta property="og:title" content="Sobre mí — Joseph Thomas Mansilla" />
+    <meta property="og:description" content="Sobre Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta property="og:url" content="https://josephmansilla.github.io/about.html" />
+    <meta property="og:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Sobre mí — Joseph Thomas Mansilla" />
+    <meta name="twitter:description" content="Sobre Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta name="twitter:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <title>Sobre mí — Joseph Thomas Mansilla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,9 +33,9 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="about" data-i18n-title="meta.about">
+  <body data-page="about" data-i18n-title="meta.about" data-i18n-desc="meta.aboutDesc">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
 
     <div id="site-header"></div>
 
@@ -32,27 +44,27 @@
         <div class="about-layout reveal">
           <div class="about-main">
             <div class="section-head">
-              <p class="kicker" data-i18n="about.kicker">About</p>
-              <h1 data-i18n="about.title">About me</h1>
+              <p class="kicker" data-i18n="about.kicker">Sobre</p>
+              <h1 data-i18n="about.title">Sobre mí</h1>
             </div>
             <div class="about-bios">
               <p class="bio" data-i18n="about.bio1">
-                Born in the United States, raised in Buenos Aires. Currently 22 years old and studying systems engineering at UTN in Buenos Aires.
+                Nacido en Estados Unidos y criado en Buenos Aires. Estudiante de 22 años de Ingeniería en Sistemas de Información en la UTN.
               </p>
               <p class="bio" data-i18n="about.bio2">
-                Passionate about software engineering, with a strong interest in system design, architecture, networking and infrastructure.
+                Apasionado por la ingeniería de software, con interés en el diseño de sistemas, su arquitectura, redes de datos e infraestructura de sistemas.
               </p>
               <p class="bio" data-i18n="about.bio3">
-                I enjoy learning and being up to date with tech, movies, music and books.
+                Siempre busco poner a la persona primero. Disfruto aprender y mantenerme al día con la tecnología, el cine, la música y los libros.
               </p>
             </div>
             <div class="about-skills">
               <div class="stack-block">
-                <h2 data-i18n="about.stack">Tech Stack</h2>
+                <h2 data-i18n="about.stack">Stack tecnológico</h2>
                 <ul class="chip-list" data-tech-stack></ul>
               </div>
               <div class="stack-block">
-                <h2 data-i18n="about.technologies">Technologies</h2>
+                <h2 data-i18n="about.technologies">Tecnologías</h2>
                 <ul class="chip-list" data-technologies></ul>
               </div>
             </div>
@@ -66,11 +78,11 @@
               height="240"
             />
             <div class="about-copy">
-              <h2 data-i18n="about.languages">Languages</h2>
+              <h2 data-i18n="about.languages">Idiomas</h2>
               <ul class="spoken-list">
-                <li><span data-i18n="about.spanish">Spanish</span><span data-i18n="about.native">Native</span></li>
-                <li><span data-i18n="about.english">English</span><span data-i18n="about.advanced">Advanced</span></li>
-                <li><span data-i18n="about.portuguese">Portuguese</span><span data-i18n="about.basic">Basic</span></li>
+                <li><span data-i18n="about.spanish">Español</span><span data-i18n="about.native">Nativo</span></li>
+                <li><span data-i18n="about.english">Inglés</span><span data-i18n="about.advanced">Avanzado</span></li>
+                <li><span data-i18n="about.portuguese">Portugués</span><span data-i18n="about.basic">Básico</span></li>
               </ul>
             </div>
           </div>
@@ -82,8 +94,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/i18n.js"></script>
-    <script src="js/shell.js"></script>
+    <script src="js/shell.js?v=3"></script>
     <script src="js/main.js"></script>
     <script src="js/projects.js"></script>
   </body>

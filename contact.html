@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -9,8 +9,20 @@
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#161616" />
     <link rel="icon" href="assets/images/jtm.ico" type="image/x-icon" />
-    <meta name="description" content="Contact Joseph Thomas Mansilla." />
-    <title>JTM | Contact</title>
+    <link rel="canonical" href="https://josephmansilla.github.io/contact.html" />
+    <meta name="description" content="Contacto de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Joseph Thomas Mansilla" />
+    <meta property="og:title" content="Contacto — Joseph Thomas Mansilla" />
+    <meta property="og:description" content="Contacto de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta property="og:url" content="https://josephmansilla.github.io/contact.html" />
+    <meta property="og:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Contacto — Joseph Thomas Mansilla" />
+    <meta name="twitter:description" content="Contacto de Joseph Thomas Mansilla, estudiante de Ingeniería en Sistemas de Información en la UTN FRBA, Buenos Aires." />
+    <meta name="twitter:image" content="https://josephmansilla.github.io/assets/images/headshot.webp" />
+    <title>Contacto — Joseph Thomas Mansilla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,24 +33,24 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body data-page="contact" data-i18n-title="meta.contact">
+  <body data-page="contact" data-i18n-title="meta.contact" data-i18n-desc="meta.contactDesc">
     <div id="particles" aria-hidden="true"></div>
-    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
     <div id="site-header"></div>
 
     <main id="main" class="site-main">
       <section class="section">
         <div class="section-head reveal">
-          <p class="kicker" data-i18n="contact.kicker">Hello</p>
-          <h1 data-i18n="contact.title">Contact</h1>
+          <p class="kicker" data-i18n="contact.kicker">Hola</p>
+          <h1 data-i18n="contact.title">Contacto</h1>
           <p class="muted" data-i18n="contact.intro">
-            Send a message through the form, or reach me directly.
+            Envíame un mensaje con el formulario, o escribinme directo.
           </p>
           <div class="contact-social" data-social="email github linkedin twitter discord"></div>
         </div>
         <form class="contact-form reveal" data-contact-form novalidate>
           <div class="field">
-            <label for="name" data-i18n="contact.name">Name</label>
+            <label for="name" data-i18n="contact.name">Nombre</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
             <p class="field-error" data-error-for="name"></p>
           </div>
@@ -48,11 +60,11 @@
             <p class="field-error" data-error-for="email"></p>
           </div>
           <div class="field">
-            <label for="message" data-i18n="contact.message">Message</label>
+            <label for="message" data-i18n="contact.message">Mensaje</label>
             <textarea id="message" name="message" required></textarea>
             <p class="field-error" data-error-for="message"></p>
           </div>
-          <button class="btn" type="submit" data-i18n="contact.send">Send message</button>
+          <button class="btn" type="submit" data-i18n="contact.send">Enviar mensaje</button>
           <p class="form-status" data-form-status role="status"></p>
         </form>
       </section>
@@ -61,8 +73,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/i18n.js"></script>
-    <script src="js/shell.js"></script>
+    <script src="js/shell.js?v=3"></script>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
   </body>
