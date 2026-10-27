@@ -1,3 +1,5 @@
 skills/
 juego.html
 js/game.js
+.env
+js/lastfm.config.js

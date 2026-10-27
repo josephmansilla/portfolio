@@ -195,7 +195,7 @@ body[data-page="home"] .logo {
   align-items: start;
 }
 
-.about-layout .section-head {
+.about-main > .section-head {
   grid-column: 1;
   grid-row: 1;
   margin-bottom: 0;
@@ -216,6 +216,103 @@ body[data-page="home"] .logo {
 .about-copy {
   grid-column: 1 / -1;
   grid-row: 3;
+}
+
+.week-track {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+
+.about-layout .tech-panel {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+
+.about-layout:has(.week-track:not([hidden])) .tech-panel {
+  grid-row: 5;
+}
+
+.week-track h2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.week-track-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  margin-top: 0.12rem;
+  color: var(--accent);
+}
+
+.week-track-card {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.75rem;
+  min-width: 0;
+  padding: 0.45rem 0.7rem 0.45rem 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-elevated);
+  color: inherit;
+  text-decoration: none;
+}
+
+.week-track-art[hidden] {
+  display: none !important;
+}
+
+.week-track-art {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.week-track-cover[hidden] {
+  display: none !important;
+}
+
+.week-track-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.week-track-copy {
+  display: grid;
+  gap: 0.05rem;
+  min-width: 0;
+}
+
+.week-track-name,
+.week-track-artist {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.week-track-name {
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.week-track-artist {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.3;
 }
 
 .headshot {
@@ -349,7 +446,9 @@ body[data-page="home"] .logo {
   .about-bios,
   .about-copy,
   .headshot,
-  .about-layout .section-head {
+  .week-track,
+  .about-layout .tech-panel,
+  .about-main > .section-head {
     grid-column: auto;
     grid-row: auto;
   }
@@ -386,5 +485,13 @@ body[data-page="home"] .logo {
 
   .logo:hover {
     background-color: var(--accent);
+  }
+
+  .week-track-card:hover {
+    background: var(--bg-muted);
+  }
+
+  .week-track-card:hover .week-track-name {
+    color: var(--accent);
   }
 }
