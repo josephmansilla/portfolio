@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "lastfm-config": "node scripts/write-lastfm-config.mjs",
     "test": "node --test tests/lastfm.test.mjs"
   }
 }

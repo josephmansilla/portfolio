@@ -1,0 +1,37 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Write Last.fm config from environment
+        run: node scripts/write-lastfm-config.mjs
+        env:
+          LASTFM_USER: ${{ vars.LASTFM_USER || secrets.LASTFM_USER }}
+          LASTFM_API_KEY: ${{ vars.LASTFM_API_KEY || secrets.LASTFM_API_KEY }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
